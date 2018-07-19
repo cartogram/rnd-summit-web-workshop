@@ -1,7 +1,7 @@
----------------------------**1:45pm**---------------------------
+---------------------------**1:45pm(10min)**---------------------------
 - set up and run the app
 - intro to web foundation principles https://github.com/Shopify/web-foundation/tree/master/Principles
 - explain the basic project sturcture https://github.com/michelleyschen/shopify-app/blob/master/README.md
 - explain components folder sturcture https://github.com/Shopify/web/blob/master/documentation/guides/components.md
 
----------------------------**2:00pm**---------------------------
+---------------------------**1:55pm**---------------------------
