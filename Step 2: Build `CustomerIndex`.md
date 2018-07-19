@@ -1,3 +1,5 @@
+---------------------------**2:00pm (20min)**---------------------------
+
 Lets start building the look & feel of the page with some fake data.
 
 ## Add Route
@@ -21,15 +23,19 @@ http://www.typescriptlang.org/docs/handbook/basic-types.html
 - create error & read the error from below
 ---
 
-## Add Test
-Web foundation doc
-https://github.com/Shopify/web-foundation/tree/master/Best%20practices
 
-^^ picked a few points from the doc to talk about
 
-add a few type of tests to `CustomerIndex`
-
+---------------------------**2:20pm (30min)**---------------------------
 
 ## `CustomerShow`
 React Router URL Params
 https://reacttraining.com/react-router/web/example/url-params
+
+---------------------------**2:50pm**---------------------------
+
+Solution Explained
+
+---------------------------**3:00pm**---------------------------
+15 min break
+
+---------------------------**3:15pm**---------------------------
