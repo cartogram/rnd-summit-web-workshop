@@ -1,3 +1,4 @@
+---------------------------**1:45pm(10min)**---------------------------
 - set up and run the app
 - intro to web foundation principles https://github.com/Shopify/web-foundation/tree/master/Principles
 - explain the basic project sturcture https://github.com/michelleyschen/shopify-app/blob/master/README.md
@@ -20,3 +21,6 @@ As you can see, this command (and every Webgen command) takes just one required 
 We are just going to run the command with defaults, so in your teminal run:
 
 `yarn create shopify app CustomersApp`
+---
+
+------------------------**1:55pm**---------------------------

@@ -1,3 +1,5 @@
+---------------------------**1:30 (15min)pm**---------------------------
+
 # RnD Summit Web Workshop
 
 - Attendance: 30 people
@@ -34,3 +36,5 @@ The Web Foundations team has created a living guide for how we build web UI at S
 Today we are going go step by step and build a simple Customer management Shopify app that uses GraphQL to query and mutate data from the Shopify Admin GraphQL API.
 
 Let's get started!
+
+---------------------------**1:45pm**---------------------------
