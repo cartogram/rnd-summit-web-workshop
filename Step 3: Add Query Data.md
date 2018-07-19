@@ -1,3 +1,4 @@
+---------------------------3:15pm (30min)---------------------------
 # Step 3
 
 ## What is GrapQL?
@@ -174,9 +175,17 @@ Genetics
 
 - Output the query `data`
 - load data in `ResourceList`
-- Update **TEST**
+
+
+---------------------------3:45pm (20min)---------------------------
 
 ## Extra
 
 1.  `CustomerShow`: Pass URL Params from React Router to query variables in compose
 2.  `CustomerIndex`: re-ordering
+
+---------------------------**3:55pm (10min)**---------------------------
+
+Solution Explained
+
+---------------------------**4:05pm**---------------------------
