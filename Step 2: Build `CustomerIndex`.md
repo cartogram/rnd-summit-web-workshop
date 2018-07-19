@@ -31,7 +31,7 @@ http://www.typescriptlang.org/docs/handbook/basic-types.html
 React Router URL Params
 https://reacttraining.com/react-router/web/example/url-params
 
----------------------------**2:50pm**---------------------------
+---------------------------**2:50pm (10min)**---------------------------
 
 Solution Explained
 
