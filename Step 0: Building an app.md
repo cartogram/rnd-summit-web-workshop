@@ -21,7 +21,7 @@ Now that we all know eachother a bit better, let's go over what we are going to 
 
 ### What is Webgen?
 
-The Webgen (working title) is a tool we built initally for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce enforce and serve educate developers, much like we are doing today, on our best practises of Web development.
+The Webgen (working title) is a tool we built initally for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce best-practises and serve educate developers, much like we are doing today, on our best practises of Web development.
 
 ### What Best Practises?
 

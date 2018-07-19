@@ -137,6 +137,12 @@ We are going to learn more about GraphQL as we go, but hopefully this gives you 
 
 What questions do you have?
 
+## Apollo
+
+Apollo is a community that builds a number of tools for developers to work with GraphQL on both the server and the client. We are going to use their JavaScript client for React in order to work with our GraphQL API on the frontend. GraphQL clients exist to abstract the common tasks that are agnostic to your specific app, such as sending queries and mutations, low-level networking details and maintaining a local cache. Apollo is one such client that we currently use in Shopify/web, but there are others such as Facebook's Relay and Lokka.
+
+---
+
 Find your shop ID in internal dashboard
 https://app.shopify.com/services/internal/shops/15012958
 
