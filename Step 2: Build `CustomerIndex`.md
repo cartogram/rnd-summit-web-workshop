@@ -1,4 +1,4 @@
----------------------------**2:00pm (20min)**---------------------------
+---------------------------**2:00pm (30min)**---------------------------
 
 Lets start building the look & feel of the page with some fake data.
 
@@ -25,7 +25,7 @@ http://www.typescriptlang.org/docs/handbook/basic-types.html
 
 
 
----------------------------**2:20pm (30min)**---------------------------
+---------------------------**2:30pm (20min)**---------------------------
 
 ## `CustomerShow`
 React Router URL Params
