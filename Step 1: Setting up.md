@@ -1,5 +1,4 @@
----------------------------**1:45pm(10min)**---------------------------
-# Step 1
+# Step 1 (30 min)
 
 We are going to start by using Webgen to scaffold out our new project. Please bear in mind that the Webgen CLI is likely to go through drastic changes in the future. We put this together very quickly for this workshop and it is very early days for us working on it.
 
@@ -161,9 +160,3 @@ Today we are going go step by step and build a simple Customer management Shopif
 As front-end developers we often start with a mock from a designer, lets have a look at what might this look for our app.
 
 * **Invision Link:** https://invis.io/4DN0ENNZMGA#/309239104_Customer_Index
-
----
-
--
-
----------------**1:55pm**---------------------------
