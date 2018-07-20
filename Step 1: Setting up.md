@@ -1,12 +1,11 @@
 ---------------------------**1:45pm(10min)**---------------------------
-- set up and run the app
-- intro to web foundation principles https://github.com/Shopify/web-foundation/tree/master/Principles
-- explain the basic project sturcture https://github.com/michelleyschen/shopify-app/blob/master/README.md
-- explain components folder sturcture https://github.com/Shopify/web/blob/master/documentation/guides/components.md
-
 # Step 1
 
 We are going to start by using Webgen to scaffold out our new project. Please bear in mind that the Webgen CLI is likely to go through drastic changes in the future. We put this together very quickly for this workshop and it is very early days for us working on it.
+
+## Using Webgen to scaffold app
+
+https://gist.github.com/michelleyschen/0a9c9ee2bc34e0ad273d5879e240ed59#file-step-1-setup-a-web-app-md
 
 Every Webgen command is prefixed with `yarn create shopify`. The command to scaffold a new app is called `app`.
 
@@ -22,8 +21,14 @@ We are just going to run the command with defaults, so in your teminal run:
 
 `yarn create shopify app CustomersApp`
 
+## Project Sturcture Explain
+https://github.com/michelleyschen/shopify-app/blob/master/README.md
 
+### What are we going to build?
 
----
+https://gist.github.com/michelleyschen/0a9c9ee2bc34e0ad273d5879e240ed59#file-step-0-building-an-app-md
+
+Today we are going go step by step and build a simple Customer management Shopify app that uses GraphQL to query and mutate data from the Shopify Admin GraphQL API.
+
 
 ---------------**1:55pm**---------------------------
