@@ -1,5 +1,3 @@
----------------------------**1:30 (15min)pm**---------------------------
-
 # RnD Summit Web Workshop
 
 - Attendance: 30 people
@@ -7,7 +5,7 @@
 - Slack: rndsummit-webworkshop
 - https://session.shopify.io/events/274/
 
-## Introduction
+## Introduction (20 min)
 
 Hello and welcome to the Rnd Summmit Web Workshop. Let's start with introductions and going around the room. Everyone state your name, the city you live in, role at Shopify and favorite Shopify snack.
 
@@ -50,5 +48,3 @@ We are going to put many of these foundational principles into practise today, b
 The Webgen (working title) is a tool we built initally for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce the principles we just talked about and serve educate developers, much like we are doing today, on our best practises for good Web development.
 
 Let's get started!
-
----------------------------**1:45pm**---------------------------
