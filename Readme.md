@@ -5,6 +5,8 @@
 - [Step 4: Mutation](./Step%204:%20Mutation.md)
 - [Step 5: Conclusion](./Step%205:%20Conclusion.md)
 
+---------
+
 ### [Step 0: Introduction](./Step%200:%20Introduction.md)
 - 1:30pm (15min)
 - @cartogram
