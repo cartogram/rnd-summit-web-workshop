@@ -167,9 +167,16 @@ Next we want to actually use this query in our app. To do this we need talk abou
 
 Apollo is a community that builds a number of tools for developers to work with GraphQL on both the server and the client. We are going to use their JavaScript client for React in order to work with our GraphQL API on the frontend. GraphQL clients exist to abstract the common tasks that are agnostic to your specific app, such as sending queries and mutations, low-level networking details and maintaining a local cache. Apollo is one such client that we currently use in Shopify/web, but there are others such as Facebook's Relay and Lokka.
 
-Apollo, thankfully, comes with our Webgen scaffold when you selected `yes` to GraphQL. Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called CustomerIndexQuery.graphql. 
+Apollo, thankfully, comes with our Webgen scaffold when you selected `yes` to GraphQL. 
 
-You will instantly see a type definition show up next to the file. 
+Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called CustomerIndexQuery.graphql. You will instantly see a type definition show up next to the file. 
+
+- explain this type file
+- import the graphql file at the of the component
+- pull in a graphql HOC from utilities and compose it.
+- pull in the generic type definition from the graphql queries utilties.
+- briefly explain generics Again.
+- add the query and grab props.data, etc..
 
 ---
 
