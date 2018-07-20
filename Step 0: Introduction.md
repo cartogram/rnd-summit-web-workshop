@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Hello and welcome to the Rnd Summmit Web Workshop. Let's start by doing introductions around the room. Everyone state your name, the city you live in, role at Shopify and favorite Shopify snack.
+Hello and welcome to the Rnd Summmit Web Workshop. Let's start with introductions and going around the room. Everyone state your name, the city you live in, role at Shopify and favorite Shopify snack.
 
 _(Organizers take part in this as well)_
 
