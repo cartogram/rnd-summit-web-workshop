@@ -1,10 +1,12 @@
 # Step 3 (30 min)
 
+Now that we have our routes and components mocked up, we want to fetch real data from our shop. To do this we are going to use GraphQL.
+
 ## What is GrapQL?
 
 Does anyone not know what GraphQL is?
 
-_(Ask someone in the audience)_
+_(Ask someone in the audience to explain)_
 
 GraphQL is a query language and runtime that sits between the front-end client and back-end data service.
 
@@ -42,7 +44,7 @@ product: {
 	// …more fields
 ```
 
-When our client requests a REST endpoint we have no way of knowing if they are actually using every piece of data we return. The obvious problem here is that we are over fetching, sending more information across the network then we need, but these unused fields do more than impact the size of the response. They could be costly to compute, resulting in needless effort on the server's part, and depreciating any of these fields is seen as too high a risk, we could unknowingly break clients that rely on any field we depreciate.
+When our client requests a REST endpoint we have no way of knowing if they are actually using every piece of data we return. The obvious problem here is that we are over fetching, sending more information across the network then we need, but these unused fields do more than impact the size of the response. They could be costly to compute, resulting in needless effort on the server's part. lastly, depreciating any of these fields is seen as too high a risk, we could unknowingly break clients that rely on any field we depreciate.
 
 **3. A REST API is weakly typed and relies on documentation to express its capabilities and data.**
 
@@ -79,7 +81,7 @@ JSON Responses
 }
 ```
 
-While REST uses "resources" as its core concept, GraphQL’s conceptual model is an entity graph. As a result, entities in GraphQL are not identified by URLs and instead we pass a query document to a single endpoint. The GraphQL backend parses this query and runs an associated resolver function of each field. These resolve functions now how to respond with the correct value, and can involve reaching out to different services, databases or respond immediately if no dynamic data is required. Our client however, is not concerned with this process and can safely request a field in the query and expect a response containing the value.
+While REST uses "resources" as its core concept, GraphQL’s conceptual model is an entity graph. As a result, entities in GraphQL are not identified by URLs and instead we pass a query document to a single endpoint. The GraphQL backend parses this query and runs an associated resolver function for each field. These resolver functions now how to respond with the correct value, and can involve reaching out to different services, databases or respond immediately if no dynamic data is required. Our client however, is not concerned with this process and can safely request a field in the query and expect a response containing the value.
 
 2.  **A REST endpoint has no way of knowing what the client is actually using.**
 
@@ -134,6 +136,29 @@ So to review the key benefits of GraphQL are:
 3.  Developer Experience (self documenting, strong type system)
 
 We are going to learn more about GraphQL as we go, but hopefully this gives you a good primer on the core concepts and some context about why we are committed to GraphQL at Shopify.
+
+First lets grab our shop's ID from (internal dashboard)[https://app.shopify.com/services/internal/shops/15012958] and go to the following link to load up the GraphiQL tool https://app.shopify.com/services/internal/shops/<YOUR SHOP ID>/graphql.
+
+You will want to select the private app you created at the beginning of this workshop from the App dopdown list (it takes a long time to refresh). Now if you click the big green play button or `CMD` + `Enter` it will run the query on the left hand side and show the result on the right hand side. You just ran a GraphQL query.
+
+<MATT FILL IN MORE SHIT HERE abuout queries and docs>
+<CONSULT THE INVISION DOC>
+	
+Our final query looks like
+
+```
+{
+  customers(first: 10) {
+    edges {
+      node {
+        displayName
+	lifeteimeDuration
+      }
+    }
+  }
+}
+```
+
 
 What questions do you have?
 
