@@ -9,12 +9,12 @@
 
 ### [Step 0: Introduction](./Step%200:%20Introduction.md)
 
-- 1:30pm (15min)
+- 1:30pm (20min)
 - @cartogram
 
 ### [Step 1: Setting up](./Step%201:%20Setting%20up.md)
 
-- 1:45pm (10min)
+- 1:45pm (30min)
 - @michelleyschen
 
 ### [Step 2: New Section](./Step%202:%20New%20Section.md)
