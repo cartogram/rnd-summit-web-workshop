@@ -40,13 +40,21 @@ In the root of this project, there are a number of configurations files and a fe
 
 _(Hot Tip: You can use `CMD` + `P` to search for this file.)_
 
-This is code responsible for what you just saw in the browser. Where it pulls in a Page component from Polaris and puts the title of the Name from the Webgen command on the page.
+This is code responsible for what you just saw in the browser. It pulls in a `Page` component from Polaris and fills in the title prop from the `name` argument from the Webgen command on the page.
 
-Open up `sever/index.js`, this is the entry point of our application which imports `server/index.js` and mounts it on port 3000.
+If you go up a folder to `sections`, every folder here should map to a first-level route in your application. Home is slightly unique because it is responsible for the `/` route, but when we create our next section you see more of how this works in most cases.
 
-Koa is a minimalistic node framework for modern Javascript apps that we will be using for our server in this workshop. It is built around the ES2016 `async` and `await` keywords.
+Components can in a few places in our app, the first one being the `app/components` folder. Components are always stored in there most shared level, so these, being at the app level, are reused throughout your entire application. You will often put your most generic components here. Next, in `app/foundation` this is where we store single-use components that are usually involved in the base setup of your app. Things like Routes will live here as well as various providers _(potentially explain provider)_ in your application. 
 
-In Koa you express your application logic as a series of asynchronous functions called middleware, which is just a fancy word for functions that all operate on a `context` or `ctx` object, and await on a `next` function to yield flow back into the rest of the app. Before we actually start building out our app, let's just write some code to better explain this concept.
+This default app is actually a server-side renderering node and react application, which means the initial render happens on the server using node, but eact subsequent render happens on the client, and we split the code responsible for each in their respective folder: server code lives in `server` and client code lives in `client`. 
+
+Open up `sever/index.js`, this is the entry point of our application on the server which imports a new Koa app.
+
+_Who has heard of Koa?_
+
+Koa is a minimalistic node framework for modern Javascript apps that we use extensive at Shopify. It is built around the ES2016 `async` and `await` keywords.
+
+In Koa you express your application logic as a series of asynchronous functions called middleware, which is just a fancy word for functions that all operate on a `context` or `ctx` object, and await on a `next` function to yield flow back into the rest of the app. Before we actually start building out our app, let's just write some code to better explain this concept and comment out the `session` `shopifyGraphQLProxy` and `renderApp` middlewares.
 
 We are going to add another middleware function. This going to be an `aysnc` function with a second `next` paramater. This is a function that resolves to a promise that we can `await` on, telling Koa to pause this current middleware and move on to the next one in the chain.
 
@@ -137,8 +145,9 @@ _example console log_
 
 As you can see, Koa made its way up the middleware chain pausing each function when we `await` on `next()` before passing the flow to the next middleware in the chain. It does this until there are no more middleware left and then it resumes each middleware in the reverse order they were added.
 
-Are there any questions about Koa so far?
+As we gradually back the middleware that we commented out see how it affects the initial render of our app.
 
+Are there any questions about Koa so far?
 
 ### What are we going to build?
 
