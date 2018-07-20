@@ -1,6 +1,19 @@
 ---------------------------**4:05pm (20min)**---------------------------
 
-content
+explain mutation (in Grqphil, it doesnt actually work)
+
+Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called CustomerUpdateMutation.graphql. You will instantly see a type definition show up next to the file.
+
+import the graphql file at the of the component
+pull in a graphql HOC from utilities and compose it.
+pull in the generic type definition from the graphql queries utilties.
+
+
+add the mutation to graphql.hoc with a name, and show `this.props.customerUpdateMutation()`
+add it to a onsubmit and add submit to the onAction, pulling that in from the FormState renderProp
+
+
+
 
 ---
 
