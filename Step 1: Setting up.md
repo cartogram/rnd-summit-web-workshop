@@ -5,7 +5,20 @@ We are going to start by using Webgen to scaffold out our new project. Please be
 
 ## Using Webgen to scaffold app
 
+### Prequisites
+
+In order to use Webgen, we reccommend you use download and use VS Code. This is not manditory, but there is an enhance developer experience that is internally support that you don't want to miss out on.
+
+* https://code.visualstudio.com/
+
+Make sure you have installed Node version ^8.9.4 and make sure you have `yarn`.
+
+* https://yarnpkg.com/en/docs/install#mac-stable
+* https://nodejs.org/en/
+
 https://gist.github.com/michelleyschen/0a9c9ee2bc34e0ad273d5879e240ed59#file-step-1-setup-a-web-app-md
+
+### The Commands
 
 Every Webgen command is prefixed with `yarn create shopify`. The command to scaffold a new app is called `app`.
 
