@@ -14,13 +14,16 @@ Every Webgen command is prefixed with `yarn create shopify`. The command to scaf
 
 Notice, every part of this command has a space between it. Before run this, lets add the `--help` flag so we can see what sort of options we can pass to this command.
 
-`yarn create shopify app`
+`yarn create shopify app --help`
 
 As you can see, this command (and every Webgen command) takes just one required argument, `AppName`, and a number of options flags (prefixed with `--`). These flags can be used to configure the final app output, but we can also use follow a series of prompts that are displayed after we run the command. The answers to the prompts will overide any flags for the same configuration, and you can by pass the prompts by setting the `--prompt` flag to false.
 
 We are just going to run the command with defaults, so in your teminal run:
 
 `yarn create shopify app CustomersApp`
+
+
+
 ---
 
-------------------------**1:55pm**---------------------------
+---------------**1:55pm**---------------------------
