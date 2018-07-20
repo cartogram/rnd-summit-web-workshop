@@ -43,6 +43,8 @@ app.use(async function(ctx, next) {
 });
 ```
 
+_an example koa middleware_
+
 If you refresh the browser where you are running the app it should still look the same, but you should see `Middleware 1` printed in the console. Let's add another middleware, but this time after our initial middleware. So our entire middleware chain looks like this.
 
 ```js
@@ -66,6 +68,8 @@ app.use(async function(ctx, next) {
   await next();
 });
 ```
+
+_example koa middlewares with a terminating middleware_
 
 If you refresh the browser, you should see `Middleware 1` and `Middleware 2` printed in the console, but not `Middleware 3`. That’s because Koa ends the request once the middleware Promise chain is resolved. That means the response was sent to the client before we got to our third middleware. We can solve this by changing our index function into an `async` function that has `await next()` like our other middleware does.
 
@@ -118,6 +122,8 @@ Back to Middleware 1
 _example console log_
 
 As you can see, Koa made its way up the middleware chain pausing each function when we `await` on `next()` before passing the flow to the next middleware in the chain. It does this until there are no more middleware left and then it resumes each middleware in the reverse order they were added.
+
+Are there any questions about Koa so far?
 
 
 ---
