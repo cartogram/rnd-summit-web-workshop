@@ -1,5 +1,6 @@
+### [Step 0: Introduction](./Step%200:%20Introduction.md)
 - 1:30pm (15min)
-  - [Step 0: Introduction](./Step%200:%20Introduction.md) (@cartogram) 
+- @cartogram
 
 - 1:45pm (10min)
   - [Step 1: Setting up](./Step%201:%20Setting%20up.md) (@michelleyschen) 
