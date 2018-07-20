@@ -147,7 +147,7 @@ You will want to select the private app you created at the beginning of this wor
 Our final query looks like
 
 ```
-{
+query CustomerIndex {
   customers(first: 10) {
     edges {
       node {
@@ -159,12 +159,17 @@ Our final query looks like
 }
 ```
 
-
 What questions do you have?
+
+Next we want to actually use this query in our app. To do this we need talk about Apollo.
 
 ## Introduction to Apollo
 
 Apollo is a community that builds a number of tools for developers to work with GraphQL on both the server and the client. We are going to use their JavaScript client for React in order to work with our GraphQL API on the frontend. GraphQL clients exist to abstract the common tasks that are agnostic to your specific app, such as sending queries and mutations, low-level networking details and maintaining a local cache. Apollo is one such client that we currently use in Shopify/web, but there are others such as Facebook's Relay and Lokka.
+
+Apollo, thankfully, comes with our Webgen scaffold when you selected `yes` to GraphQL. Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called CustomerIndexQuery.graphql. 
+
+You will instantly see a type definition show up next to the file. 
 
 ---
 
