@@ -24,7 +24,7 @@ Every Webgen command is prefixed with `yarn create shopify`. The command to scaf
 
 `yarn create shopify app`
 
-Notice, every part of this command has a space between it. Before run this, lets add the `--help` flag so we can see what sort of options we can pass to this command.
+Notice, every part of this command has a space between it. Before running this, lets add the `--help` flag so we can see what sort of options we can pass to this command.
 
 `yarn create shopify app --help`
 
