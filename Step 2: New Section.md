@@ -54,7 +54,7 @@ We first need to import the new components. Make the following changes.
 We still have one error on our renderItem prop, we will resolve this by adding a new private function for this prop. Underneath our render function, add a new private method and copy and paste the body of the inline function to this private method.
 
 ```
-private function renderItem(item: type) {
+private renderItem(item: any) {
   const {id, url, name, location} = item;
   const media = <Avatar customer size="medium" name={name} />;
   return (
@@ -80,33 +80,34 @@ Next change the `renderItem` prop to use this method.
 +renderItem={this.renderItem}
 ```
 
-6. Add mock data on top of `CustomerIndex`
+You should now see the customer list being rendered on the page.
 
----
+Let's talk about the `any` type we added to this private method. We need this because of Typescript. Who has used typescript before?
 
-**Knowledge Stop**
-typescript the basic during 7.
-http://www.typescriptlang.org/docs/handbook/basic-types.html
+Can anyone explain it?
 
-- read `Page` & `ResourceList` Props type
-- follow prop using `command+click`
-- create error & read the error from below
+Typescript is a static typing language where the type of the variables is known at runtime. This is the reason why when I change the type to `any`, the compile time error went away. Typescript is completely optional, but by adding either `ts` or `tsx` extension to your file you are opting to use it for that file. You will often find `.d.ts` files in a Typescript app. These are seperate Typescript definitions that typeically live next to a javascript.
 
----
+I heard many people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few we love about Typescript.
 
----------------------------**2:15pm (20min)**---------------------------
+* Easy to find compile time errors, such as null or undefined edge cases
+* Tonnes of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity project. If you take a look at our package.json file under devDependencies, you can see a number of these type definitions. They start with `@types`. 
+* These are particularly helpful when the community documention is shit or often incomplete. Typescript add a additional layer of documention to our code.
 
-## `CustomerShow`
+If you go to any of our React components or community package in VSCODE and `CMD` + `Click` it will take you the type definition of that code. Let's try this on our Polaris TestStyle component, first just hover over the component and it gives you some information about what it is, but if we `Cmd` + `Click` on the component you will see that TextStyle is a Stateless Functional Component that accepts a 2 props, `variation` and `children`. Finally, if we accidently type variation incorectly or apss it a prop of the wrong, say a number, our editor will warn us of this problem.
 
-React Router URL Params
-https://reacttraining.com/react-router/web/example/url-params
+These <INSERT PROPER NAME FOR TYPE ERROR> dialogs are often long and difficult to read at first, but if you read them from the bottom up they are a little easier to digest.
 
----------------------------**2:35pm (5min)**---------------------------
+### Excercise
 
-Solution Explained
+Now let's see if you can do the same process for `CustomerShow`. You will need to:
 
----------------------------**2:40pm**---------------------------
+1. Use Webgen to create a new component with the name `CustomerShow` in the Customers section
+1. Add another Route to the Customers section of `/show` and point it to this new component
+1. Consult the mock up for what Polaris components you will need and render them in your new component
+1. Take a break
 
-15 min break
+When we start again in 15 minutes we will go through the answer together, and additionally add editing cababilities using a package from quilt called `@shopify/react-form-state` and make our routes dynamic. If you finish ahead a time, you can explore the documentation and try to do this yourself.
 
----------------------------**2:55pm**---------------------------
+* https://github.com/Shopify/quilt/blob/master/packages/react-form-state/README.md
+* https://github.com/Shopify/quilt
