@@ -102,7 +102,7 @@ These <INSERT PROPER NAME FOR TYPE ERROR> dialogs are often long and difficult t
 
 Now let's see if you can do the same process for `CustomerShow`. You will need to:
 
-1. Use Webgen to create a new component with the name `CustomerShow` in the Customers section
+1. Use Webgen to create a new component with the name `CustomerShow` in the Customers section, choose `function`
 1. Add another Route to the Customers section of `/show` and point it to this new component
 1. Consult the mock up for what Polaris components you will need and render them in your new component
 1. Take a break
@@ -111,3 +111,69 @@ When we start again in 15 minutes we will go through the answer together, and ad
 
 * https://github.com/Shopify/quilt/blob/master/packages/react-form-state/README.md
 * https://github.com/Shopify/quilt
+
+### Solution
+
+First thing we want to do is run our webgen command, I'm going to do this now.
+
+`yarn create shopify component CustomerShow`
+
+In `Customers/index.tsx` copy and paste the first route, change the `component` prop to CustomerShow for this new route. We need to import this component as well.
+
+Change the path to javascript template literal using backticks, use `match.url` and append `/show`. 
+
+`
+path={${math.url}/show
+`
+
+Now go to your CustomerShow component, lets add our Polaris imports. Lets start with the Page and add our title of `Customer`. We also want to add the `breadcrumbs`, this is an array of `LinkActions`, these have a `content` property which is the visual link title as well as a `url` which is where the breadcrumb go when clicked.
+
+If you go back to the browser, a breadcumb should show up that when clicked goes back to the CustomerIndex.
+
+Next we want to add the Save button. In Polairs, we can see this is a `primaryAction`, lets just copy and paste that into our Page.
+
+Next lets add the visual part of our Form, add the `FormLayout` and `TextFeild` to our Polaris import. Add 2 TextFields to the page, one with a label "first name" and the other with "last name".
+
+We should get a type error for our missing `onChange` prop, let's fix this.
+
+Go to the quilt package for Form State. We first need to install it, type the following in the terminal.
+
+```ts
+yarn add @shopify/react-form-state
+```
+
+import 'FormState' from '@shopify/react-form-state'
+
+In order to use FormState, you want wrap your entire Page in the Component. Next we need to provide it initialValues for the form, lets add some mock data here.
+
+```ts
+FormState initialValues={{firstName: 'Tobi', fastName: 'lükte'}} />
+```
+
+FormState uses a common pattern in React for composition called "RenderProp" or sometimes reffered to as "Child as function" components. Components using this pattern do not accept children in the normal way, but instead expect a function. Let's start by just adding this.
+
+To run Javascript within JSX, we open a curly brace. Next, we are going to add a empty arrow function. Next add a return statement with our Page markup. You just added a RenderProp.
+
+Now, the implementation of FormState is meant to abstract away the details of how to manage all the nitty gritty details of working with Forms and just give you what you need for your form. This information and functionality is accessed through the paramaters in your child function. We need `formDetails` so add that as the furst argument to the function.
+
+We want to add types here, `CMD` + click on the formState type and we see that the FormDetails of type FormDetails and we can import that from the FormState package. This type is a generaic
+
+INSERT EXPLAINATION OF GENERICS
+
+Lets start by declaring an interface for Fields, this should contain all the key and value types of our fields.
+
+First we have firstName of type string and lastName of types string.
+
+Now we can use javascript destructing to pull our the things we need from our form.
+
+If we click through to form detials again, we see there is a boolean from that tells us if we are submitting, and some FormData that has information if we have errors or the form is dirty, what we need is the fields. This is a collection of fieldDescriptors that have a name,initialValue, value and other information about each specific form field.
+
+If we continue destruction our fields, we can pull firstName and lastName objects. We can spread all of these onto our TextField component because the props are the an exact match.
+
+That is all we need to do to edit our FormField.
+
+The last thing we want to do is make the links from CustomerIndex actually work, you will notice clicking on a customer goes to the NotFound page. Let's change the route from the `Customers/index.tsx` and chnage the path to the costomer show component from a static path to a dynmaic one, by adding a `:customerId` after the match.url.
+
+Now when we go back to the customerindex and click a customer to go to our customer index page.
+
+Thats it, we're done. Now let's data.
