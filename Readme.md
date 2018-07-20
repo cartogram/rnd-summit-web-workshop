@@ -1,6 +1,6 @@
 - [Step 0: Introduction](./Step%200:%20Introduction.md)
 - [Step 1: Setting up](./Step%201:%20Setting%20up.md)
-- [Step 2: New Section](./Step%202:%20New20Section.md)
+- [Step 2: New Section](./Step%202:%20New%20Section.md)
 - [Step 3: Query](./Step%203:%20Query.md)
 - [Step 4: Mutation](./Step%204:%20Mutation.md)
 - [Step 5: Conclusion](./Step%205:%20Conclusion.md)
