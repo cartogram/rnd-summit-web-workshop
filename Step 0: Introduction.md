@@ -43,12 +43,11 @@ But one of the most important parts of this repo is the Principles folder. The m
 
 * **Isolation over integration**: We prefer to write code that exists independently within the codebase, exposing only a thoughtful public API for use by other developers. This isolation makes code easier to test, reuse, refactor, and remove, without any impact on the rest of the codebase. Think of Polaris, which is an isolated set of mostly presentational components: render markup only. They are highly shareable among many difference Shopify-wide project and are composed into application specific components that are often connected to the business logic. We also have Quilt, which is a set of non-presentational libraries that you can pull into your project as needed.
 
-We are going to put many of these foundational principles into practise today.
+We are going to put many of these foundational principles into practise today, but first enough talk, lets start looking at what we are going to build today.
 
 ### What is Webgen?
 
-The Webgen (working title) is a tool we built initally for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce best-practises and serve educate developers, much like we are doing today, on our best practises of Web development.
-
+The Webgen (working title) is a tool we built initally for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce the principles we just talked about and serve educate developers, much like we are doing today, on our best practises for good Web development.
 
 Let's get started!
 
