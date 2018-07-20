@@ -44,7 +44,9 @@ This is code responsible for what you just saw in the browser. It pulls in a `Pa
 
 If you go up a folder to `sections`, every folder here should map to a first-level route in your application. Home is slightly unique because it is responsible for the `/` route, but when we create our next section you see more of how this works in most cases.
 
-Components can in a few places in our app, the first one being the `app/components` folder. Components are always stored in there most shared level, so these, being at the app level, are reused throughout your entire application. You will often put your most generic components here. Next, in `app/foundation` this is where we store single-use components that are usually involved in the base setup of your app. Things like Routes will live here as well as various providers _(potentially explain provider)_ in your application. 
+Components can be stored a few places in our app, the first one being the `app/components` folder. Thinking back to the priciple of "Isolation over integration", components are only stored in their highest shared level. This `componenents` folder ––being at the `app` level–– should only contain components that are reused throughout your entire application, but you will often have other, area-specific `components` folders throught your app. Components will often start out being very specific, and move upwards as they becomes more generic.
+
+Next, in `app/foundation` this is where we store single-use components that are usually involved in the base setup of your app. Things like Routes will live here as well as various providers _(potentially explain provider)_ in your application. 
 
 This default app is actually a server-side renderering node and react application, which means the initial render happens on the server using node, but eact subsequent render happens on the client, and we split the code responsible for each in their respective folder: server code lives in `server` and client code lives in `client`. 
 
@@ -151,10 +153,14 @@ Are there any questions about Koa so far?
 
 ### What are we going to build?
 
-https://gist.github.com/michelleyschen/0a9c9ee2bc34e0ad273d5879e240ed59#file-step-0-building-an-app-md
+Today we are going go step by step and build a simple Customer management Shopify app that uses GraphQL to query and mutate data from the Shopify Admin GraphQL API. It will:
 
-Today we are going go step by step and build a simple Customer management Shopify app that uses GraphQL to query and mutate data from the Shopify Admin GraphQL API.
+* List the first 10 customers from your shop
+* Provide editing and saving cababilities for each customer
 
+As front-end developers we often start with a mock from a designer, lets have a look at what might this look for our app.
+
+* **Invision Link:** https://invis.io/4DN0ENNZMGA#/309239104_Customer_Index
 
 ---
 
