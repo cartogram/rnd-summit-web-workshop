@@ -28,26 +28,21 @@ Notice, every part of this command has a space between it. Before running this, 
 
 `yarn create shopify app --help`
 
-As you can see, this command (and every Webgen command) takes just one required argument, `AppName`, and a number of options flags (prefixed with `--`). These flags can be used to configure the final app output, but we can also use follow a series of prompts that are displayed after we run the command. The answers to the prompts will overide any flags for the same configuration, and you can by pass the prompts by setting the `--prompt` flag to false.
+As you can see, this command (and every Webgen command) takes just one required argument, `<name>`, and a number of options flags (prefixed with `--`). These flags can be used to configure the final app output, but we can also follow a series of prompts that are displayed after we run the command. The answers to the prompts will overide any flags for the same configuration, and you can by-pass the prompts by setting the `--prompt` flag to false.
 
 We are just going to run the command with defaults, so in your teminal run:
 
 `yarn create shopify app CustomersApp`
 
-## Project Sturcture Explain
-https://github.com/michelleyschen/shopify-app/blob/master/README.md
-
-### What are we going to build?
-
-https://gist.github.com/michelleyschen/0a9c9ee2bc34e0ad273d5879e240ed59#file-step-0-building-an-app-md
-
-Today we are going go step by step and build a simple Customer management Shopify app that uses GraphQL to query and mutate data from the Shopify Admin GraphQL API.
-
 ### App Structure Walkthrough
 
-In the root of this project, there are a number of configurations files and a few Javascript files to get us started.
+In the root of this project, there are a number of configurations files and a few Javascript files to get us started. It is always best to start with the `package.json`, this file tells you what npm packages are included and a few sensible default scripts that you will run. If you were to open your console and run `yarn && yarn dev`, that will start the development server on your computer. It will take a moment to compile (and show a waiting screen on localhost: 8080) but when ready you can visit `localhost:8080` and see the default app with a title. Go to `app/sections/Home/HomeIndex/HomeIndex.tsx`.
 
-Open up `index.js`, this is the entry point of our application which imports `index.js` and mounts it on port 3000.
+_(Hot Tip: You can use `CMD` + `P` to search for this file.)_
+
+This is code responsible for what you just saw in the browser. Where it pulls in a Page component from Polaris and puts the title of the Name from the Webgen command on the page.
+
+Open up `sever/index.js`, this is the entry point of our application which imports `server/index.js` and mounts it on port 3000.
 
 Koa is a minimalistic node framework for modern Javascript apps that we will be using for our server in this workshop. It is built around the ES2016 `async` and `await` keywords.
 
@@ -143,6 +138,13 @@ _example console log_
 As you can see, Koa made its way up the middleware chain pausing each function when we `await` on `next()` before passing the flow to the next middleware in the chain. It does this until there are no more middleware left and then it resumes each middleware in the reverse order they were added.
 
 Are there any questions about Koa so far?
+
+
+### What are we going to build?
+
+https://gist.github.com/michelleyschen/0a9c9ee2bc34e0ad273d5879e240ed59#file-step-0-building-an-app-md
+
+Today we are going go step by step and build a simple Customer management Shopify app that uses GraphQL to query and mutate data from the Shopify Admin GraphQL API.
 
 
 ---
