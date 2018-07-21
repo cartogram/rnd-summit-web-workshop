@@ -1,15 +1,23 @@
----------------------------**4:05pm (20min)**---------------------------
+# Step 4
 
-explain mutation (in Grqphil, it doesnt actually work)
+There is a lot of overlap between how queries and mutations work in Apollo and GraphQL. First let's head back to our GraphiQL interface.
 
-Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called CustomerUpdateMutation.graphql. You will instantly see a type definition show up next to the file.
+MATT EXPLAIN MUTATIONS
 
-import the graphql file at the of the component
-pull in a graphql HOC from utilities and compose it.
-pull in the generic type definition from the graphql queries utilties.
+Just like before, we copy our Mutation query and create new file in our CustomerIndex's graphql folder called `CustomerUpdateMutation.graphql`. Again, we will instantly see a type definition show up next to the file.
+
+Next we follow all the same steps.
+
+* Import the GraphQL file at the of the `CustomerShow.tsx` component.
+* Import in a GraphQL HOC from utilities and compose it using the `compose` utility from quilt.
+* Import and use the generic type definition from the GraphQL queries utilties.
+
+Just like when we added our query, we had access to the `data` prop, when composing a new mutation we receive a `mutate` prop. This prop is a function that we can invoke to trigger our mutation. 
+
+Often we have multiple mutations on a single React component. Our `graphql` HOC has a second options paramater, where we can give our mutation a name. Doing so allows us call `this.props.customerUpdateMutation()` to trigger our mutation.
 
 
-add the mutation to graphql.hoc with a name, and show `this.props.customerUpdateMutation()`
+
 add it to a onsubmit and add submit to the onAction, pulling that in from the FormState renderProp
 
 
