@@ -169,30 +169,50 @@ Apollo is a community that builds a number of tools for developers to work with 
 
 Apollo, thankfully, comes with our Webgen scaffold when you selected `yes` to GraphQL. 
 
-Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called CustomerIndexQuery.graphql. You will instantly see a type definition show up next to the file. 
+Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called `CustomerIndexQuery.graphql`. You will instantly see a type definition show up next to the file. 
 
-- explain this type file
-- import the graphql file at the of the component
-- pull in a graphql HOC from utilities and compose it.
+EXPLAIN TYPE FILE MICHELLE
+
+To use this new query we are going to import a `graphql` component. 
+
+`import {graphql} from 'utilities/graphql';`
+
+This component is a React Higher Order Component (HOC), this is another compositional pattern in React similar to RenderProps (in fact, Apollo also exposes a Query component that uses a RenderProp, but we perfer to use the HOC versions in Shopify Web). HOCs are a function that take a component and return a new, enhanced component. When we use the `graphql` function to wrap our CustomerIndex component, we are enhancing it by giving it the ability to communicate, through Apollo, to our GraphQL API.
+
+To implement this HOC component we are going to use another quilt library called `compose`.
+
+`import compose from '@shopify/react-compose';`
+
+This is a common utility that can be found in a number of different packages such as Redux, Recompose, and even Apollo has its own `compose` utility. We built and prefer to use the quilt implementation because it is standalone, its just a light-weight library that doesn't rely on those other frameworks, and has a less cumbersome Typescript implementation, which we will see for ourselves soon.
+
+To add our composed component with graphql, we make the following changes.
+```diff
+- export defualt CustomerIndex;
++ export default compose<Props>(graphql())(CustomerIndex);
+```
+
+Next we want to import this GraphQL file into our `CustomerIndex.tsx` component, and add this as the first argument to our graphql function.
+
+```diff
++ import customerIndexQuery, {
++   CustomerIndexQueryQueryData,
++ from './graphql/CustomerIndexQuery.graphql';
+
+...
+
+- export defualt CustomerIndex;
++ export default compose<Props>(graphql(customerIndexQuery))(CustomerIndex);
+```
+
 - pull in the generic type definition from the graphql queries utilties.
 - briefly explain generics Again.
-- add the query and grab props.data, etc..
+
+With this HOC successfully implemented, we now have a `data` prop that contains all the information about our GraphQL query: whether it is still loading the data, whether there was an error, some other helpful methods for refetching and polling, and ofcourse, the return data itself. Like we talked about earlier, this data comes back to us in the same shape as our query.
+
+Next we just need to fill in the real data in place our mock data.
 
 ---
 
-Find your shop ID in internal dashboard
-https://app.shopify.com/services/internal/shops/15012958
-
-GraphiQL
-https://app.shopify.com/services/internal/shops/15012958/graphql
-
-- Intro to GraphiQL
-- Create customer query in GraphiQL
-- Move the query to `.graphql` file
-- Add `import`
-
-- Intro to Apollo (Instead of Query component, use the Query HOC)
-  https://www.apollographql.com/docs/react/essentials/queries.html#basic
 - Add `compose` https://www.apollographql.com/docs/react/essentials/queries.html#props
 - Add `ComposedProps` https://www.apollographql.com/docs/react/essentials/queries.html#render-prop
 
