@@ -156,9 +156,9 @@ To run Javascript within JSX, we open a curly brace. Next, we are going to add a
 
 Now, the implementation of FormState is meant to abstract away the details of how to manage all the nitty gritty details of working with Forms and just give you what you need for your form. This information and functionality is accessed through the paramaters in your child function. We need `formDetails` so add that as the furst argument to the function.
 
-We want to add types here, `CMD` + click on the formState type and we see that the FormDetails of type FormDetails and we can import that from the FormState package. This type is a generaic
+We want to add types here, `CMD` + click on the formState type and we see that the FormDetails of type FormDetails and we can import that from the FormState package. This type is call a generic.
 
-INSERT EXPLAINATION OF GENERICS
+Generic is a way to make reusable components in typescript. You often need generic if you would like a single type (shape) that worked over a range of types. A generics type can accept a numbers of type parameter and output a type at the time the user consume the type. You will often see this type use in many of the community library typing.
 
 Lets start by declaring an interface for Fields, this should contain all the key and value types of our fields.
 
