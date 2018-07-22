@@ -164,6 +164,13 @@ Lets start by declaring an interface for Fields, this should contain all the key
 
 First we have firstName of type string and lastName of types string.
 
+```
+interface Fields {
+  firstName: string;
+  lastName: string;
+}
+```
+
 Now we can use javascript destructing to pull our the things we need from our form.
 
 If we click through to form detials again, we see there is a boolean from that tells us if we are submitting, and some FormData that has information if we have errors or the form is dirty, what we need is the fields. This is a collection of fieldDescriptors that have a name,initialValue, value and other information about each specific form field.
