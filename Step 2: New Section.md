@@ -31,7 +31,7 @@ What question do you have?
 
 Now that we have our page at our desired route, let's bring in Polaris and make it look better. Let's look back at our mock up on Invision.
 
-INSERT LINK
+**Invision Link:** https://invis.io/4DN0ENNZMGA#/309239104
 
 We can see a list of customers with some avatars and a Page with a title. In Polaris, we convienently have a Page component. Head to [polaris.shopify.com](polaris.shopify.com) and search for Page.
 
