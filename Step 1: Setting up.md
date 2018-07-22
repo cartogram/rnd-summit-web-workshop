@@ -159,4 +159,4 @@ Today we are going go step by step and build a simple Customer management Shopif
 
 As front-end developers we often start with a mock from a designer, lets have a look at what might this look for our app.
 
-* **Invision Link:** https://invis.io/4DN0ENNZMGA#/309239104_Customer_Index
+* **Invision Link:** https://invis.io/4DN0ENNZMGA#/309239104
