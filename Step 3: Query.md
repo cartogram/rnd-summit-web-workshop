@@ -171,7 +171,9 @@ Apollo, thankfully, comes with our Webgen scaffold when you selected `yes` to Gr
 
 Let's copy our query that we wrote and create new file in our CustomerIndex's graphql folder called `CustomerIndexQuery.graphql`. You will instantly see a type definition show up next to the file. 
 
-EXPLAIN TYPE FILE MICHELLE
+> ### .graphql.d.ts
+> You should see instantly, the `.graphql.d.ts` file that show up beside your `.graphql` file.
+> This graphql typing is generated automatically for you by sewing-kit using the `schema.graphql` file from the graphql server. This typing can than be imported into your component to ensure typing continuity. 
 
 To use this new query we are going to import a `graphql` component. 
 
@@ -204,8 +206,17 @@ Next we want to import this GraphQL file into our `CustomerIndex.tsx` component,
 + export default compose<Props>(graphql(customerIndexQuery))(CustomerIndex);
 ```
 
-- pull in the generic type definition from the graphql queries utilties.
-- briefly explain generics Again.
+```diff
+export interface Props {}
++ type ComposedProps = Props & GraphQLQuery<CustomerIndexQueryQueryData>;
+```
+
+Lets recall the type generic we talked about earlier, and introduce a new concept call Intersection types that allow us to combined properties of all of the types being intersected using the `&` operator. We will than replace the `Props` of our `CustomerIndex` to denote all the props that this component has access to from the component itself and from all of the composed HoCs.
+
+```
+-class CustomerIndex extends React.PureComponent<Props>
++class CustomerIndex extends React.PureComponent<ComposedProps>
+```
 
 With this HOC successfully implemented, we now have a `data` prop that contains all the information about our GraphQL query: whether it is still loading the data, whether there was an error, some other helpful methods for refetching and polling, and ofcourse, the return data itself. Like we talked about earlier, this data comes back to us in the same shape as our query.
 
@@ -216,36 +227,9 @@ Next we just need to fill in the real data in place our mock data.
 - Add `compose` https://www.apollographql.com/docs/react/essentials/queries.html#props
 - Add `ComposedProps` https://www.apollographql.com/docs/react/essentials/queries.html#render-prop
 
----
 
-**Knowledge Stop**
-typescript advance
-
-Intersection Types
-
-http://www.typescriptlang.org/docs/handbook/advanced-types.html
-
-Genetics
-
-## http://www.typescriptlang.org/docs/handbook/generics.html
-
-- Output the query `data`
-- load data in `ResourceList`
-
-
----------------------------3:25pm (20min)---------------------------
-
-## Extra
+## Excercise
 
 1.  `CustomerShow`: Pass URL Params from React Router to query variables in compose
 2.  `CustomerIndex`: re-ordering
 
----------------------------**3:45pm (5min)**---------------------------
-
-Solution Explained
-
----------------------------3:50pm---------------------------
-
-15 min break
-
----------------------------4:05pm---------------------------
