@@ -94,8 +94,8 @@ Can anyone explain it?
 > I heard many people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few we love about Typescript.
 
 > * Easy to find compile time errors, such as null or undefined edge cases
-* Tonnes of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity project. If you take a look at our package.json file under devDependencies, you can see a number of these type definitions. They start with `@types`. 
-* These are particularly helpful when the community documention is shit or often incomplete. Typescript add a additional layer of documention to our code.
+> * Tonnes of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity project. If you take a look at our package.json file under devDependencies, you can see a number of these type definitions. They start with `@types`. 
+> * These are particularly helpful when the community documention is shit or often incomplete. Typescript add a additional layer of documention to our code.
 
 > If you go to any of our React components or community package in VSCODE and `CMD` + `Click` it will take you the type definition of that code. Let's try this on our Polaris TestStyle component, first just hover over the component and it gives you some information about what it is, but if we `Cmd` + `Click` on the component you will see that TextStyle is a Stateless Functional Component that accepts a 2 props, `variation` and `children`. Finally, if we accidently type variation incorectly or apss it a prop of the wrong, say a number, our editor will warn us of this problem.
 
@@ -139,6 +139,7 @@ Next lets add the visual part of our Form, add the `FormLayout` and `TextFeild` 
 
 We should get a type error for our missing `onChange` prop, let's fix this.
 
+### Implement `FormState`
 Go to the quilt package for Form State. We first need to install it, type the following in the terminal.
 
 ```ts
@@ -161,7 +162,8 @@ Now, the implementation of FormState is meant to abstract away the details of ho
 
 We want to add types here, `CMD` + click on the formState type and we see that the FormDetails of type FormDetails and we can import that from the FormState package. This type is call a generic.
 
-Generic is a way to make reusable components in typescript. You often need generic if you would like a single type (shape) that worked over a range of types. A generics type can accept a numbers of type parameter and output a type at the time the user consume the type. You will often see this type use in many of the community library typing.
+> ### Typescript Generic
+> Generic is a way to make reusable components in typescript. You often need generic if you would like a single type (shape) that worked over a range of types. A generics type can accept a numbers of type parameter and output a type at the time the user consume the type. You will often see this type use in many of the community library typing.
 
 Lets start by declaring an interface for Fields, this should contain all the key and value types of our fields.
 
@@ -182,6 +184,7 @@ If we continue destruction our fields, we can pull firstName and lastName object
 
 That is all we need to do to edit our FormField.
 
+### URL Parameters
 The last thing we want to do is make the links from CustomerIndex actually work, you will notice clicking on a customer goes to the NotFound page. Let's change the route from the `Customers/index.tsx` and chnage the path to the costomer show component from a static path to a dynmaic one, by adding a `:customerId` after the match.url.
 
 Now when we go back to the customerindex and click a customer to go to our customer index page.
