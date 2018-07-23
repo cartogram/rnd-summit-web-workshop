@@ -24,10 +24,10 @@ Here are some additional resources and official documentation about the technolo
 * [Shopify GraphQL proxy](https://github.com/Shopify/quilt/tree/master/packages/koa-shopify-graphql-proxy)
 
 #### Slack
-* [#webgen](https://shopify.slack.com/messages/CBAK450NM/) - Webgen discussion
-* [#web-foundation](https://shopify.slack.com/messages/C58CNRGQH/) - Main channel for Shopify Web
-* [#web-foundation-apps](https://shopify.slack.com/messages/C68ESTWP8/) - App specific discussion around the Web Foundation Stack
-* [#libaray-extraction](https://shopify.slack.com/messages/C9XKR9FQD/) - AKA Quilt
+* [#webgen](https://shopify.slack.com/messages/CBAK450NM/)
+* [#web-foundation](https://shopify.slack.com/messages/C58CNRGQH/)
+* [#web-foundation-apps](https://shopify.slack.com/messages/C68ESTWP8/)
+* [#libaray-extraction](https://shopify.slack.com/messages/C9XKR9FQD/)
 * @cartogram
 * @michelle.chen
 
