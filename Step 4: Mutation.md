@@ -1,8 +1,38 @@
-# Step 4
+# Step 4 Mutations
 
-There is a lot of overlap between how queries and mutations work in Apollo and GraphQL. First let's head back to our GraphiQL interface.
+Where queries are to reading from a data store, mutation are to writing to it. There is a lot of overlap between how queries and mutations work in Apollo and GraphQL. First let's head back to our GraphiQL interface.
 
-MATT EXPLAIN MUTATIONS
+Mutations follow the same syntactical structure as queries, but they always need to start with the `mutation` keyword, start by typing that followed by opening and closing curly braces `{}`.
+
+There generally are three kinds of mutations: creating, updating and deleting. For our case, we want to update our customer. so let's use the GraphiQL Docs interface to find the mutation we want update our customer, `customerUpdate`. Add that inside the curly braces.
+
+```graphql
+mutation {
+  customerUpdate() {
+  }
+}
+```
+
+Next type that.
+
+This mutation takes one variable, `input` of types `CustomerInput`.
+
+
+```graphql
+mutation CustomerUpdate($input: CustomerInput!) {
+  customerUpdate(input: $input) {
+    customer {
+      id
+      firstName
+      lastName
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}
+```
 
 Just like before, we copy our Mutation query and create new file in our CustomerIndex's graphql folder called `CustomerUpdateMutation.graphql`. Again, we will instantly see a type definition show up next to the file.
 
