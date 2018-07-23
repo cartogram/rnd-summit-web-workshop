@@ -8,6 +8,8 @@ Mutations follow the same syntactical structure as queries, but they always need
 
 There are three general types of mutations: creating, updating and deleting. For our case, we want to update our customer. Once again let's use the GraphiQL Docs interface to find the mutation we want from our Schema that corresponds to updating a customer, `customerUpdate`. Add `customerUpdate` inside the curly braces and finally give our our mutation an operation name of `CustomerUpdate`.
 
+>Note: mutations and queries are always nemed resource-first. This is dilberate and makes it easy to find all possible queries on a single resource when ordered alphabetically. 
+
 ```graphql
 mutation CustomerUpdate {
   customerUpdate() {
