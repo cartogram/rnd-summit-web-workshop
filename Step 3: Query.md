@@ -141,9 +141,14 @@ First lets grab our shop's ID from (internal dashboard)[https://app.shopify.com/
 
 You will want to select the private app you created at the beginning of this workshop from the App dopdown list (it takes a long time to refresh). Now if you click the big green play button or `CMD` + `Enter` it will run the query on the left hand side and show the result on the right hand side. You just ran a GraphQL query.
 
-<MATT FILL IN MORE SHIT HERE abuout queries and docs>
-<CONSULT THE INVISION DOC>
-	
+Let's start writing the query we need on `CustomerIndex`. The first thing we need to write it our operation type. This can be either `query` (reading data), `mutation` (writing data) or `subscription` (subscribing a stream of changes on a node). We are only going to talk about `query` and `mutation` in this workshop, and in our case we want to read data for our page so we want to write a query. 
+
+Next we are going to add the operation name, which goes after the operation type and can be any meaningful name we want. This is generally used for debugging and server-side logging. We are going to call our mutation `CustomerIndex`.
+
+If we look back at our [mock up](https://projects.invisionapp.com/share/4DN0ENNZMGA#/screens/309239104) we see need to request a list of customers with their name and length of time they've been customers. At this point, we don't know the name of the query we want, but we can use the Schema to figure this out.
+
+In GraphiQL the Schema can be explored using the drawer on the right hand side called `Docs`. We can explore the schema to determine all of the queries we can run on our GraphQL API as well as the Types of all the fields and variables.
+
 Our final query looks like
 
 ```
