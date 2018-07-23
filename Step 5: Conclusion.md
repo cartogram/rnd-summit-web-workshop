@@ -15,17 +15,13 @@ Here are some additional resources and official documentation about the technolo
 * [Render-props](https://reactjs.org/docs/render-props.html)
 * [Graphql](https://www.howtographql.com/)
 
-#### Components
-* [Koa Shopify auth](https://github.com/Shopify/quilt/tree/master/packages/koa-shopify-auth)
-* [React HTML component](https://github.com/Shopify/quilt/tree/master/packages/react-html)
-* [Shopify graphQL proxy](https://github.com/Shopify/quilt/tree/master/packages/koa-shopify-graphql-proxy)
-* [Prettier](https://prettier.io/)
-* [React fetch](https://www.npmjs.com/package/react-fetch)
-
-#### Other Github Repos
+#### Github
 * [WebGen](https://github.com/Shopify/webgen)
 * [Shopify Web](https://github.com/Shopify/web)
 * [Web Foundation](https://github.com/Shopify/web-foundation)
+* [Koa Shopify Auth](https://github.com/Shopify/quilt/tree/master/packages/koa-shopify-auth)
+* [React HTML Component](https://github.com/Shopify/quilt/tree/master/packages/react-html)
+* [Shopify GraphQL proxy](https://github.com/Shopify/quilt/tree/master/packages/koa-shopify-graphql-proxy)
 
 #### Slack
 * [#webgen](https://shopify.slack.com/messages/CBAK450NM/) - Webgen discussion
