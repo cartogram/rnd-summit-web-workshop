@@ -1,4 +1,4 @@
-# Step 4 Mutations
+# Step 4: Mutations (40 min)
 
 Where queries are to reading from a data store, mutation are to writing to it. There is a lot of overlap between how queries and mutations work in Apollo and GraphQL. First let's head back to our GraphiQL interface.
 
