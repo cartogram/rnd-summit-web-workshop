@@ -4,16 +4,16 @@ Where queries are to reading from a data store, mutation are to writing to it. T
 
 Mutations follow the same syntactical structure as queries, but they always need to start with the `mutation` keyword, start by typing that followed by opening and closing curly braces `{}`. This is called the operation type.
 
-There generally are three kinds of mutations: creating, updating and deleting. For our case, we want to update our customer. so let's use the GraphiQL Docs interface to find the mutation we want update our customer, `customerUpdate`. Add that inside the curly braces.
+There generally are three kinds of mutations: creating, updating and deleting. For our case, we want to update our customer. so let's use the GraphiQL Docs interface to find the mutation we want update our customer, `customerUpdate`. Add that inside the curly braces. We are going to call our mutation `CustomerUpdate`.
 
 ```graphql
-mutation {
+mutation CustomerUpdate {
   customerUpdate() {
   }
 }
 ```
 
-There are two more optional parts that we are going to add to this mutation: the operation name and variable definitions. The operation name goes after the operation type and can be any meaningful name we want. This is generally used for debugging and server-side logging. We are going to call our mutation `CustomerUpdate`.
+
 
 Next in our variable definitions we declare the types of variables you are planning to provide. In our case we have one variable `input` of type `!CustomerInput`. We get this information from the schema and Docs side bar in GraphiQL. We also want to pass this variable down to our mutation. 
 
