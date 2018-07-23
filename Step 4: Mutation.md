@@ -53,7 +53,20 @@ Next we follow all the same steps.
 
 Just like when we added our query, we had access to the `data` prop, when composing a new mutation we receive a `mutate` prop. This prop is a function that we can invoke to trigger our mutation. 
 
-Often we have multiple mutations on a single React component. Our `graphql` HOC has a second options paramater, where we can give our mutation a name. Doing so allows us call `this.props.customerUpdateMutation()` to trigger our mutation. We are going to add a new private method to take care of doing this and sending in the fields we want to update.
+Often we have multiple mutations on a single React component. Our `graphql` HOC has a second options paramater, where we can give our mutation a name. Doing so allows us call `this.props.customerUpdateMutation()` to trigger our mutation. 
+
+```ts
+export default compose<Props>(
+  // other HOCs...
+  graphql(customerUpdateMutation, {
+    name: 'customerUpdateMutation',
+    options: {
+      refetchQueries: ['CustomerIndexQuery'],
+    },
+  }),
+)(CustomerShow);```
+
+We are going to add a new private method to take care of doing this and sending in the fields we want to update.
 
 ```ts
 @autobind
