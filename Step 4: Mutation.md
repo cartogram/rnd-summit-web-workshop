@@ -145,9 +145,13 @@ graphql(customerUpdateMutation, {
 ```
 
 
-## TODO
+## Excercise: Delete Customer
 
-delete customer
+Now we are going to set you off on your own for another excercise to delete customers.
+
+* Another Graphql Mutation for deletion
+* Add this new query to the graphql HOC
+* Write the UI to Trigger the mutation
 
 
 
