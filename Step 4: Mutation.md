@@ -127,7 +127,7 @@ return (
 );
 ```
 
-We saw that we had to refresh our page to see the results from the mutation. While Apollo’s store will attempt to handle the UI updates after a query or mutation automatically, in some cases we need to tell it explicitly how to do this. Removing or appending from a list, as we did when adding a product, is one such case where we need to tell the Store to refetch our Products list.
+With all that complete, we can go back to our browser and update customers. However, we have to refresh our page to see the results from the mutation. While Apollo’s store will attempt to handle the UI updates after a query or mutation automatically, in some cases we need to tell it explicitly how to do this. Removing or appending from a list, as we did when adding a product, is one such case where we need to tell the Store to refetch our Products list.
 
 So far in this workshop we have been using the very basics of the graphql HOC, passing it a query and a component, but there is additional a configuration object that can be passed in. We are going to work with this configuration a lot in the remaining chapters, starting here by looking at the `refectchQueries`.
 
