@@ -35,13 +35,13 @@ Examine the following JSON response:
 
 ```
 product: {
-	unused_foo: “foo”,
-	unused_bar: “bar”,
-	images: […]
-	variants: {
-	// …more fields
-	}
-	// …more fields
+  unused_foo: “foo”,
+  unused_bar: “bar”,
+  images: […]
+  variants: {
+  // …more fields
+  }
+  // …more fields
 ```
 
 When our client requests a REST endpoint we have no way of knowing if they are actually using every piece of data we return. The obvious problem here is that we are over fetching, sending more information across the network then we need, but these unused fields do more than impact the size of the response. They could be costly to compute, resulting in needless effort on the server's part. lastly, depreciating any of these fields is seen as too high a risk, we could unknowingly break clients that rely on any field we depreciate.
@@ -52,9 +52,9 @@ Examine the types of values here:
 
 ```
 product: {
-	price: “$100.00”,
-	createdAt: “2006-04-17T21:22:48.2698750Z”
-	…
+  price: “$100.00”,
+  createdAt: “2006-04-17T21:22:48.2698750Z”
+  // …more fields
 ```
 
 Finally, REST APIs are usually weakly-typed and lack machine-readable metadata. While there exists some solutions to this problem (like JSON Schema), the reality is that most REST APIs do not provide this sort of data and rely on typically incomplete or out-of-date documentation.
@@ -69,8 +69,8 @@ One Endpoint: https://…/graphql
 Post Requests
 
 {
-	"query": "...",
-	"operationName": "...",
+  "query": "...",
+  "operationName": "...",
 }
 
 JSON Responses
@@ -113,18 +113,18 @@ In a GraphQL API, the clients determine the shape of the response and can reques
 Schema.graphql
 
 type Product {
-	price: Int!
-	createdAt: DateTime!
-	taxable: Boolean
-…
+  price: Int!
+  createdAt: DateTime!
+  taxable: Boolean
+  // … more fields
 
 schema.graphql.d.ts
 
 interface Product {
-	price: Schema.Money;
-	taxable: boolean;
-	createdAt: Date;
-…
+  price: Schema.Money;
+  taxable: boolean;
+  createdAt: Date;
+  // … more fields
 ```
 
 In a GraphQL API, we have a typed schema and documentation is a first-class citizen. Documentation lives side-by-side with the code that constitutes it. There is a tool available, GraphiQL, that empowers anyone to explore an API and run queries on it. Additionally, we can use the types in our schema to inform our front-end Typescript types. This dramatically reduces the amount of type-related bugs making their way into production.
