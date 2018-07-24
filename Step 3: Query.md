@@ -76,8 +76,8 @@ Post Requests
 JSON Responses
 
 {
-	"data": { ... },
-	"errors": [ ... ]
+  "data": { ... },
+  "errors": [ ... ]
 }
 ```
 
@@ -89,19 +89,19 @@ While REST uses "resources" as its core concept, GraphQL’s conceptual model is
 Example Query
 
 {
-	shop {
-		id
-		name
-	}
+  shop {
+    id
+    name
+  }
 }
 
 Example Response
 
 {
-	“shop”: {
-		“id”: “123"
-		“name”: “Snow Devil”
-	}
+  “shop”: {
+    “id”: “123"
+    “name”: “Snow Devil”
+  }
 }
 ```
 
