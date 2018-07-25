@@ -91,7 +91,7 @@ Can anyone explain what typescript is?
 
 ### What is typescript
 
-Typescript is a static typing language where the type of the variables is known at runtime. This is the reason why when I change the type to `any`, the compile time error went away. Typescript is completely optional, but by adding either `ts` or `tsx` extension to your file you are opting to use it for that file. You will often find `.d.ts` files in a Typescript app. These are seperate Typescript definitions that typeically live next to a javascript.
+Typescript is a static typing language where the type of the variables is known at complie time. This is the reason why when I change the type to `any`, the compile time error went away. Typescript is completely optional, but by adding either `ts` or `tsx` extension to your file you are opting to use it for that file. You will often find `.d.ts` files in a Typescript app. These are seperate Typescript definitions that typeically live next to a javascript.
 
 ### What we love about typescript
 
