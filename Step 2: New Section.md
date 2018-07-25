@@ -95,15 +95,15 @@ Typescript is a static typing language where the type of the variables is known 
 
 ### What we love about typescript
 
-We often hear people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few we love about Typescript.
+We often hear people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few things we love about Typescript.
 
 * Easy to find compile time errors, such as null or undefined edge cases
-* Tonnes of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity project. If you take a look at our package.json file under devDependencies, you can see a number of these type definitions. They start with `@types`. 
-* These are particularly helpful when the community documention is shit or often incomplete. Typescript add a additional layer of documention to our code.
+* Lots of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity projects. If you take a look at our `package.json` file under `devDependencies`, you can see a number of these type definitions. They all start with `@types`. 
+* These are particularly helpful when the community documention is poor or often incomplete. Typescript adds a additional layer of documention to our code.
 
-If you go to any of our React components or community package in VSCODE and `CMD` + `Click` it will take you the type definition of that code. Let's try this on our Polaris TestStyle component, first just hover over the component and it gives you some information about what it is, but if we `Cmd` + `Click` on the component you will see that TextStyle is a Stateless Functional Component that accepts a 2 props, `variation` and `children`. Finally, if we accidently type variation incorectly or apss it a prop of the wrong, say a number, our editor will warn us of this problem.
+If you go to any of our React components or community package in VSCODE and `CMD` + `Click` it will take you the type definition of that code. Let's try this on our Polaris TestStyle component, first just hover over the component and it gives you some information about what it is, but if we `Cmd` + `Click` on the component you will see that TextStyle is a Stateless Functional Component that accepts a 2 props, `variation` and `children`. Finally, if we accidently type variation incorectly or pass it a prop of the wrong type, for example: a number, our editor will warn us of this problem.
 
-These error re call type guards, when reading your type guard messages, the dialogs are often long and difficult to read at first, but if you read them from the bottom up they are a little easier to digest.
+These errors are called type guards. When reading your type guard messages, the dialogs are often long and difficult to parse at first, but this will get easier with time. Note: it is to easier read them from the bottom.
 
 ---
 
@@ -116,7 +116,7 @@ Now let's see if you can do the same process for `CustomerShow`. You will need t
 1. Consult the mock up for what Polaris components you will need and render them in your new component
 1. Take a break
 
-When we start again in 15 minutes we will go through the answer together, and additionally add editing cababilities using a package from quilt called `@shopify/react-form-state` and make our routes dynamic. If you finish ahead a time, you can explore the documentation and try to do this yourself.
+When we start again in 15 minutes we will go through the solution together, and additionally add editing cababilities using a package from quilt called `@shopify/react-form-state`. Finally, we will make our routes dynamic. If you finish ahead a time, you can explore the documentation and try to do this yourself.
 
 * https://github.com/Shopify/quilt/blob/master/packages/react-form-state/README.md
 * https://github.com/Shopify/quilt
@@ -141,7 +141,7 @@ If you go back to the browser, a breadcumb should show up that when clicked goes
 
 Next we want to add the Save button. In Polairs, we can see this is a `primaryAction`, lets just copy and paste that into our Page.
 
-Next lets add the visual part of our Form, add the `FormLayout` and `TextFeild` to our Polaris import. Add 2 TextFields to the page, one with a label "first name" and the other with "last name".
+Next lets add the visual part of our Form, add the `FormLayout` and `TextField` to our Polaris import. Add 2 TextFields to the page, one with a label "first name" and the other with "last name".
 
 We should get a type error for our missing `onChange` prop, let's fix this.
 
