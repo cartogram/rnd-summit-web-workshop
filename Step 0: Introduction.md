@@ -11,12 +11,6 @@ Hello and welcome to the Rnd Summmit Web Workshop. Let's start with introduction
 
 _(Organizers take part in this as well)_
 
-Poll Audiences:
-- React
-- Typescript
-- Koa
-- Graphql
-
 
 ## Workshop Goals
 
