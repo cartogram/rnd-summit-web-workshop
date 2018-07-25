@@ -2,27 +2,23 @@
 
 ## Adding a new Route and Component
 
-Now that we have our basic app scaffold, lets build out a new section for our Customers routes. Make sure your dev server is running at this point. 
+We have our basic app scaffold. Let's build out a new section for our Customers routes. Make sure your dev server is running at this point. 
 
-The first thing we are going to do is create a new folder under `app/sections`, call this folder `Customers`.
-
-Now, in your terminal, type `yarn create component CustomerIndex`. When you run this commnad, it will provide for you a list of possible places you can generate this component.
-
-When prompted, pick the `Customers` directory we just created for the location, and the choose `No` for graphql and `No` for styles. 
+The first thing we are going to do is create a new folder under `app/sections`, call this folder `Customers`. Now in your terminal, type `yarn create component CustomerIndex`. When you run this commnad, it will provide for you a list of possible places you can generate this component. When prompted, pick the `Customers` directory we just created for the location, and the choose `No` for graphql and `No` for styles. 
 
 ---
 
 ### Types of components
 
-There are three main type of components that we typically build with React, Pure Component (pure), Stateless Functional Component (function), and Component (class). Stateless Funcational Components, is just a function that takes arguments (props) and returns markup (JSX). They do not have state and generally pretty simple: lovingly referred to as "dumb". Next we have Pure and Class Components. These are the basic building block of a Class that you extend from the React the library, they are stateful, can use the React lifecycle events and usually more complex than Stateless Functinal Components. In most cases, you want to use a Pure Component over a Class Components because they are more performant. React components re-render themselves when their props or state change, this can be an expensive operation, and we want to limit the times this happens to only when we need it. Pure components will re-render less often because they use shallow comparison of their props and state.
+There are three main type of components that we typically build with React, Pure Component (pure), Stateless Functional Component (function), and Component (class). Stateless Funcational Component are just functions that take arguments (props) and returns markup (JSX). They do not have state and generally pretty simple: lovingly referred to as "dumb". Next we have Pure and Class Components. These are the basic building block of a Class that you extend from the React the library, they are stateful, can use the React lifecycle events and usually more complex than Stateless Functinal Components. In most cases, you want to use a Pure Component over a Class Components because they are more performant. React components re-render themselves when their props or state change, this can be an expensive operation and we want to limit the times this happens to only when we need it. Pure components will re-render less often because they use a shallow comparison of their props and state.
 
 ---
 
-So in this case, let's go with the pure component with is the default.
+So in this case, let's go with the default, `pure` component.
 
-Now if you go into your `sections/Customer` folder, you should see a CustomerIndex component that has been scaffolded out for you. With a index, tests folder and `CustomerIndex.tsx` component file. 
+If you go into your `sections/Customer` folder, you should see a `CustomerIndex` component that has been scaffolded out for you with an `index.ts`, `tests` folder and `CustomerIndex.tsx` main component file. 
 
-In the `section/Customer/index.ts` this is the file you will use to import the components in this section with their appropriate routes. Let's copy and paste the contents of `Sectiongs/Home/index.tsx`. In the future, the Webgen should take care of this for you. Rename all of the `Home` to `Customer` (you can use `CMD` + `D` to help).
+In the `section/Customer/index.ts` this is a file you will use to import the components in this section with their appropriate routes. Let's copy and paste the contents of `Sectiongs/Home/index.tsx`. In the future, the Webgen should take care of this for you. Rename all of the instances of `Home` to `Customer` (you can use `CMD` + `D` to help).
 
 Go into `section/index.tsx` and export the Customers section from this file.
 
@@ -40,11 +36,9 @@ Now that we have our page at our desired route, let's bring in Polaris and make 
 
 We can see a list of customers with some avatars and a Page with a title. In Polaris, we convienently have a Page component. Head to [polaris.shopify.com](polaris.shopify.com) and search for Page.
 
-Copy and paste the code snippet and paste it into our `CustomerIndex.tsx` page. When you save, prettier should take care of most of the formmating errors except that Page is not defined. We need to import it from polaris.
+Copy and paste the code snippet and paste it into our `CustomerIndex.tsx` page. When you save, prettier should take care of most of the formmating errors except that Page is not defined: we need to import it from polaris.
 
-Add `import {Page} from '@shopify/polaris'` to the top of the page. Note, Webgen has taken care of installing this for us when we generated our app.
-
-Delete all the props other than `title`, change this to `Customers` and refresh the page. You should see a Page with the title `Customers`. Sweet.
+Add `import {Page} from '@shopify/polaris'` to the top of the page. Note: Webgen has taken care of installing this for us when we generated our app. Delete all the props other than `title`, change this to `Customers` and refresh the page. You should see a Page with the title `Customers`.
 
 Next we need a `ResourceList` so head back to [polaris.shopify.com](polaris.shopify.com), search `ResourceList` and copy and paste the code snippet again. Paste it inside the `Page` component as its children.
 
