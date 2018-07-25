@@ -235,7 +235,10 @@ Next we just need to fill in the real data in place our mock data.
 
 ## Excercise
 
-1.  `CustomerShow`: Pass URL Params from React Router to query variables in compose
+1.  `CustomerShow` Add graphql for CustomerShow
+
+Explain variables
+
 2.  `CustomerIndex`: re-ordering
 
 Apollo Doc about what options the HoC has: https://www.apollographql.com/docs/react/essentials/queries.html#props
