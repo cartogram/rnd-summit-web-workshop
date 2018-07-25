@@ -29,7 +29,7 @@ If you go in the Decisions Records, you will see some history on why we do certa
 
 But one of the most important parts of this repo is the Principles folder. The main principles are,
 
-* **User over team over self**: The enduser (ususally merchants, sometimes other shopifolk) matter most in the decisions we make. If the enduser is not impacted one way or the other, make the decision that is best for your team. Finally consider yourself. This prioritization is the most important of the priciples and the others are simply more specific applications of optimizing for our users, over our team, over ourselves.
+* **User over team over self**: The enduser (ususally merchants, sometimes other shopifolk) matter most in the decisions we make. If the enduser is not impacted one way or the other, make the decision that is best for your team, then finally consider yourself. This prioritization is the most important of the priciples and the others are simply more specific applications of optimizing for our users, over our team, over ourselves.
 
 * **API over implementation**: Another way to phrase this principle is to expose only what you need to, never more. Exposing implementation details externally makes the piece of code harder to understand. We will come across this later in the workshop when we start looking at components. Components collect all the languages that go into creating them (at a minimum: CSS, HTML, and JavaScript) and expose an API for consuming them. In this way we separate concerns by component (API), not by language (implementation). We will be looking at a lot of React code today, which is very much the embodiment of this principle. 
 
@@ -45,6 +45,6 @@ We are going to put many of these foundational principles into practise today, b
 
 ### What is Webgen?
 
-The Webgen (working title) is a tool we built initally for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce the principles we just talked about and serve educate developers, much like we are doing today, on our best practises for good Web development.
+The Webgen (working title) is a tool we built intially for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce the principles we just talked about and serve educate developers, much like we are doing today, on our best practises for good Web development.
 
 Let's get started!
