@@ -39,9 +39,9 @@ But one of the most important parts of this repo is the Principles folder. The m
 
 * **Declarative over imperative**: We prefer to write declarative code. Declarative code is generally more concise, readable and composable. We prefer to render a component that encapsulates a series of imperative DOM actions, this is why you will see render-less components such as `<EventListener />` or `<ScrollLock />`, than to expose classes or functions that one would call directly. Does anyone know what we mean when we say render-less component?
 
-* **Isolation over integration**: We prefer to write code that exists independently within the codebase, exposing only a thoughtful public API for use by other developers. This isolation makes code easier to test, reuse, refactor, and remove, without any impact on the rest of the codebase. Think of Polaris, which is an isolated set of mostly presentational components: render markup only. They are highly shareable among many difference Shopify-wide project and are composed into application specific components that are often connected to the business logic. We also have Quilt, which is a set of non-presentational libraries that you can pull into your project as needed.
+* **Isolation over integration**: We prefer to write code that exists independently. This isolation makes code easier to test, reuse, refactor, and remove, without any impact on the rest of the codebase. Think of Polaris, which is an isolated set of mostly presentational components: render markup only. They are highly shareable among many projects at Shopify. Likewise, we also have Quilt, which is a isolated set of non-presentational libraries that you can pull into your project as needed. This rule is bit trickier to understand, but think of it as compositon over inheritence. Think of when you might archetect a parent with child components, the parent would be responsible for passing layout to the parent. 
 
-We are going to put many of these foundational principles into practise today, but first enough talk, lets start looking at what we are going to build today.
+We are going to put many of these foundational principles into practise today.
 
 ### What is Webgen?
 
