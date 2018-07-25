@@ -83,21 +83,29 @@ You should now see the customer list being rendered on the page.
 
 Let's talk about the `any` type we added to this private method. We need this because of Typescript. Who has used typescript before?
 
-Can anyone explain it?
+_(Go to slides)_
 
-> ### What is typescript
-> Typescript is a static typing language where the type of the variables is known at runtime. This is the reason why when I change the type to `any`, the compile time error went away. Typescript is completely optional, but by adding either `ts` or `tsx` extension to your file you are opting to use it for that file. You will often find `.d.ts` files in a Typescript app. These are seperate Typescript definitions that typeically live next to a javascript.
+Can anyone explain what typescript is?
 
-> ### What we love about typescript
-> I heard many people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few we love about Typescript.
+---
 
-> * Easy to find compile time errors, such as null or undefined edge cases
-> * Tonnes of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity project. If you take a look at our package.json file under devDependencies, you can see a number of these type definitions. They start with `@types`. 
-> * These are particularly helpful when the community documention is shit or often incomplete. Typescript add a additional layer of documention to our code.
+### What is typescript
 
-> If you go to any of our React components or community package in VSCODE and `CMD` + `Click` it will take you the type definition of that code. Let's try this on our Polaris TestStyle component, first just hover over the component and it gives you some information about what it is, but if we `Cmd` + `Click` on the component you will see that TextStyle is a Stateless Functional Component that accepts a 2 props, `variation` and `children`. Finally, if we accidently type variation incorectly or apss it a prop of the wrong, say a number, our editor will warn us of this problem.
+Typescript is a static typing language where the type of the variables is known at runtime. This is the reason why when I change the type to `any`, the compile time error went away. Typescript is completely optional, but by adding either `ts` or `tsx` extension to your file you are opting to use it for that file. You will often find `.d.ts` files in a Typescript app. These are seperate Typescript definitions that typeically live next to a javascript.
 
-> These error re call type guards, when reading your type guard messages, the dialogs are often long and difficult to read at first, but if you read them from the bottom up they are a little easier to digest.
+### What we love about typescript
+
+I heard many people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few we love about Typescript.
+
+* Easy to find compile time errors, such as null or undefined edge cases
+* Tonnes of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity project. If you take a look at our package.json file under devDependencies, you can see a number of these type definitions. They start with `@types`. 
+* These are particularly helpful when the community documention is shit or often incomplete. Typescript add a additional layer of documention to our code.
+
+If you go to any of our React components or community package in VSCODE and `CMD` + `Click` it will take you the type definition of that code. Let's try this on our Polaris TestStyle component, first just hover over the component and it gives you some information about what it is, but if we `Cmd` + `Click` on the component you will see that TextStyle is a Stateless Functional Component that accepts a 2 props, `variation` and `children`. Finally, if we accidently type variation incorectly or apss it a prop of the wrong, say a number, our editor will warn us of this problem.
+
+These error re call type guards, when reading your type guard messages, the dialogs are often long and difficult to read at first, but if you read them from the bottom up they are a little easier to digest.
+
+---
 
 ### Excercise
 
@@ -160,8 +168,13 @@ Now, the implementation of FormState is meant to abstract away the details of ho
 
 We want to add types here, `CMD` + click on the formState type and we see that the FormDetails of type FormDetails and we can import that from the FormState package. This type is call a generic.
 
-> ### Typescript Generic
-> Generic is a way to make reusable components in typescript. You often need generic if you would like a single type (shape) that worked over a range of types. A generics type can accept a numbers of type parameter and output a type at the time the user consume the type. You will often see this type use in many of the community library typing.
+---
+
+### Typescript Generic
+
+Generic is a way to make reusable components in typescript. You often need generic if you would like a single type (shape) that worked over a range of types. A generics type can accept a numbers of type parameter and output a type at the time the user consume the type. You will often see this type use in many of the community library typing.
+
+---
 
 Lets start by declaring an interface for Fields, this should contain all the key and value types of our fields.
 
