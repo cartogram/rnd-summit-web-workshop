@@ -8,8 +8,7 @@ The first thing we are going to do is create a new folder under `app/sections`, 
 
 Now, in your terminal, type `yarn create component CustomerIndex`. When you run this commnad, it will provide for you a list of possible places you can generate this component.
 
-No, we will not require graphql.
-No, we do not need css.
+When prompted, pick the `Customers` directory we just created for the location, and the choose `No` for graphql and `No` for styles. 
 
 > ### Types of components
 > There are three main type of components that we typically build with React, Pure Component (pure), Stateless Functional Component (function), and Component (class). Stateless Funcational Components, is just a function that takes arguments (props) and returns markup (JSX). They do not have state and generally pretty simple: lovingly referred to as "dumb". Next we have Pure and Class Components. These are the basic building block of a Class that you extend from the React the library, they are stateful, can use the React lifecycle events and usually more complex than Stateless Functinal Components. In most cases, you want to use a Pure Component over a Class Components because they are more performant. React components re-render themselves when their props or state change, this can be an expensive operation, and we want to limit the times this happens to only when we need it. Pure components will re-render less often because they use shallow comparison of their props and state.
