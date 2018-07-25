@@ -47,7 +47,7 @@ Components can be stored a few places in our app, the first one being the `app/c
 
 Next, in `app/foundation` this is where we store single-use components that are usually involved in the base setup of your app. Things like Routes will live here as well as various providers _(potentially explain provider)_ in your application. 
 
-This default app is actually a server-side renderering node and react application, which means the initial render happens on the server using node, but eact subsequent render happens on the client, and we split the code responsible for each in their respective folder: server code lives in `server` and client code lives in `client`. 
+This default app is actually a server-side renderering node and React application, which means the initial render happens on the server using Node, but each subsequent render happens on the client, and we split the code responsible for each in their respective folder: server code lives in `server` and client code lives in `client`. 
 
 Open up `sever/index.js`, this is the entry point of our application on the server which imports a new Koa app.
 
