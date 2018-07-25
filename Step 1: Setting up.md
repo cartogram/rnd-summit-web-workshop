@@ -49,7 +49,7 @@ Next, in `app/foundation` this is where we store single-use components that are 
 
 This default app is actually a server-side renderering node and React application, which means the initial render happens on the server using Node, but each subsequent render happens on the client, and we split the code responsible for each in their respective folder: server code lives in `server` and client code lives in `client`. 
 
-Open up `sever/index.js`, this is the entry point of our application on the server which imports a new Koa app.
+Open up `sever/index.js`, this is the entry point of our application on the server which creates a new Koa app.
 
 _Who has heard of Koa?_
 
