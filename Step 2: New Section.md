@@ -95,7 +95,7 @@ Typescript is a static typing language where the type of the variables is known 
 
 ### What we love about typescript
 
-I heard many people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few we love about Typescript.
+We often hear people say "Typescript is difficult to ramp up", but it also common for them to change their mind to "I cannot live with out it" after only a few weeks of using it. Here are a few we love about Typescript.
 
 * Easy to find compile time errors, such as null or undefined edge cases
 * Tonnes of community support. There is a DefinitelyTypes npm package (and website) where you can find type definitions to the majority of the popular comunity project. If you take a look at our package.json file under devDependencies, you can see a number of these type definitions. They start with `@types`. 
