@@ -2,7 +2,7 @@
 
 - Attendance: 30 people
 - Time: 3.5 hrs
-- [Slides]("./Web Workshop.pdf")
+- [Slides](WebWorkshop.pdf)
 
 ## Introduction (20 min)
 
