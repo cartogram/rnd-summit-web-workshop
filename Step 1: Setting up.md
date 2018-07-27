@@ -2,7 +2,11 @@
 
 We are going to start by using Webgen to scaffold out our new project. Please bear in mind that the Webgen CLI is likely to go through drastic changes in the future. We put this together very quickly for this workshop and it is very early days for us working on it.
 
-## Using Webgen to scaffold app
+## Using Webgen
+
+The Webgen (working title) is a tool we built intially for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce the principles we just talked about and serve educate developers, much like we are doing today, on our best practises for good Web development.
+
+Let's get started!
 
 ### Prequisites
 
