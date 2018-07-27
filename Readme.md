@@ -34,6 +34,6 @@
 - excercise
 - excercise explained 
 
-## [Step 5: Conclusion](./Step%205:%20Conclusion.md)
+## [Step 5: Conclusion](./Step%205:%20Conclusion.md) (20min)
 
 - 4:40pm (20min)
