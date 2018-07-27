@@ -1,9 +1,3 @@
-# Web Workshop
-
-- Attendance: 30 people
-- Time: 3.5 hrs
-- [Slides](WebWorkshop.pdf)
-
 ## Introduction (20 min)
 
 Hello and welcome to the Web Workshop.
