@@ -42,9 +42,3 @@ But one of the most important parts of this repo is the Principles folder. The m
 * **Isolation over integration**: We prefer to write code that exists independently. This isolation makes code easier to test, reuse, refactor, and remove, without any impact on the rest of the codebase. Think of Polaris, which is an isolated set of mostly presentational components: render markup only. They are highly shareable among many projects at Shopify. Likewise, we also have Quilt, which is a isolated set of non-presentational libraries that you can pull into your project as needed. This rule is bit trickier to understand, but think of it as compositon over inheritence. Think of when you might archetect a parent with child components, the parent would be responsible for passing layout to the parent. 
 
 We are going to put many of these foundational principles into practise today.
-
-### What is Webgen?
-
-The Webgen (working title) is a tool we built intially for RnD Summit to help developers scaffold code quickly and easily. The tool currently supports new Apps and Components with limited options, but it has ambitious goals and hopes to automate everything from Polaris component forks to hack-days projects to third-party developers looking to jump start their Shopify app idea. We hope this will both enforce the principles we just talked about and serve educate developers, much like we are doing today, on our best practises for good Web development.
-
-Let's get started!
