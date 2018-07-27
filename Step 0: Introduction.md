@@ -1,9 +1,8 @@
-# RnD Summit Web Workshop
+# Web Workshop
 
 - Attendance: 30 people
-- Time: 3.5 hrs, 1:30 pm - 5:00 pm
-- Slack: rndsummit-webworkshop
-- https://session.shopify.io/events/274/
+- Time: 3.5 hrs
+- [Slides]("./Web Workshop.pdf")
 
 ## Introduction (20 min)
 
