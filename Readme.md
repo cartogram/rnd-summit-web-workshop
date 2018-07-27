@@ -37,4 +37,5 @@
 
 ## [Step 5: Conclusion](./Step%205:%20Conclusion.md) (20 min)
 
-- Resources
+- Lecture: Resources
+- Lecture: QA
