@@ -6,9 +6,9 @@ First let's head back to GraphiQL.
 
 Mutations follow the same syntactical structure as queries, but they always need to start with the `mutation` keyword, start by typing `mutation` followed by opening and closing curly braces `{}`. Again, this is called the operation type.
 
-For our case, we want to update our customer. Once again let's use the GraphiQL Docs interface to find the mutation we want from our Schema that corresponds to updating a customer, `customerUpdate`. Add `customerUpdate` inside the curly braces and finally give our our mutation an operation name of `CustomerUpdate`.
+For our case, we want to update our customer. Once again let's use the GraphiQL Docs interface to find the mutation we want from our Schema that corresponds to updating a customer, `customerUpdate`. Add `customerUpdate` inside the curly braces and finally give our mutation an operation name of `CustomerUpdate`.
 
->Note: mutations and queries are always nemed resource-first. This is dilberate and makes it easy to find all possible queries on a single resource when ordered alphabetically. 
+>Note: In the Shopify GraphQL API mutations and queries are always named resource-first. This is by design, making it easy to find all possible operations on a single resource when they are ordered alphabetically. 
 
 ```graphql
 mutation CustomerUpdate {
