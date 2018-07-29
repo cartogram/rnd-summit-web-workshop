@@ -17,7 +17,7 @@ mutation CustomerUpdate {
 }
 ```
 
-Next in our variable definitions we declare the types of variables you are planning to provide. In our case we have one variable `input` of type `!CustomerInput`. We get this information from the schema and Docs side bar in GraphiQL. We also want to pass this variable down to our mutation. 
+Next in our variable definitions we declare the types of variables you are planning to provide. In our case we have one variable, we are going to make a new varible `$input` of type `!CustomerInput`. We get this information from the schema and Docs side bar in GraphiQL. In GraphQL, variables are prepended by the `$` sign. We also want to pass this new variable down to our mutation, which is expecting an `input` parameter. All together our mutation should now look like this.
 
 ```graphql
 mutation CustomerUpdate($input: CustomerInput!) {
@@ -26,8 +26,18 @@ mutation CustomerUpdate($input: CustomerInput!) {
 }
 ```
 
-Finally, like with a query, we’re also able to specify a fieldset for a mutation in which we can ask for different properties back on the updated object.  
+Finally, like when writing a query, we’re also able to specify a fieldset for a mutation in which we can ask for different properties back on the updated object. This is a unique and interesting characteristic of GraphQL mutations: after they complete the 'write' part of their operation, they can follow that with a 'read'. We are going to ask for the `id`, `firstName` and `lastName` files on the customer we just updated.
 
+Below that we also want to request the `UserError` field which will return an array of validation errors that might occur during our mutation. 
+
+In terms of IDL, the UserError type looks like this:
+
+type UserError {
+  message: String!
+  field: [String!]
+}
+
+The message is the error message that should be shown to the end user while field is an array of strings, forming a path to the field in error. We won't go into these in today's workshop, but it's good practise to request these fields with most mutations.
 
 ```graphql
 mutation CustomerUpdate($input: CustomerInput!) {
@@ -45,7 +55,7 @@ mutation CustomerUpdate($input: CustomerInput!) {
 }
 ```
 
-Just like before, we copy our Mutation query and create new file in our CustomerShow's graphql folder called `CustomerUpdateMutation.graphql`. Again, we will instantly see a type definition show up next to the file.
+With our mutation now complete, you will notice that we cannot run it inside of GraphiQL. This is because the GraphiQL interface is 'read only'. We can, just like before, copy this mutation and create new file in our `CustomerShow`'s graphql folder called `CustomerUpdateMutation.graphql`. Again, we will instantly see a type definition show up next to the file.
 
 Next we follow all the same steps.
 
@@ -55,7 +65,7 @@ Next we follow all the same steps.
 
 Just like when we added our query, we had access to the `data` prop, when composing a new mutation we receive a `mutate` prop. This prop is a function that we can invoke to trigger our mutation. 
 
-Often we have multiple mutations on a single React component. Our `graphql` HOC has a second options paramater, where we can give our mutation a name. Doing so allows us call `this.props.customerUpdateMutation()` to trigger our mutation. 
+Often we have multiple mutations on a single React component. Our `graphql` HOC has a second options paramater, where we can give our mutation a name. Doing so allows us to call `this.props.customerUpdateMutation()` to trigger our mutation. 
 
 ```ts
 export default compose<Props>(
@@ -96,7 +106,7 @@ We want to add this method to the `onSubmit` prop of `FormState`:
 onSubmit={this.handleCustomerUpdate}
 ```
 
-This will add a prop to trigger this mutation in our RenderProp, which we will add as the onAction of our PrimaryAction.
+We can then trigger this mutation in our RenderProp using the `submit` property. We will add as the `onAction` of our `PrimaryAction` for the `Page`.
 
 ```ts
 return (
@@ -129,13 +139,11 @@ return (
 );
 ```
 
-With all that completed, we can go back to our browser and update customers. However, if we navigate back to `CustomerIndex`, we have to refresh our page to see the results from the mutation. While Apollo’s store will attempt to handle the UI updates after a query or mutation automatically, in some cases we need to tell it explicitly how to do this. Removing or appending from a list, or updating two seperate query results, are some cases where we need to tell the Store to refetch our list.
+With all that completed, we can go back to our browser and update customers. However, if we navigate back to `CustomerIndex`, we have to refresh our page to see the results from the mutation. While Apollo’s store will attempt to handle the UI updates after a query or mutation automatically, in some cases we need to tell it explicitly how to do this. Removing or appending from a list, or updating two seperate query results, are some cases where we need to tell the local Store to refetch our list.
 
-So far in this workshop we have been using the very basics of the graphql HOC, passing it a query and a component, but there are many additional configuration that can be passed in. We are going to work with this configuration a lot in the remaining chapters, starting here by looking at the `refectchQueries`.
+So far in this workshop we have been using the very basics of the graphql HOC, passing it a query and a component with some variables, but there are many additional configurations that can be passed in. One such configuration is called `refectchQueries`.
 
 `refetchQueries` will execute queries and normalize the results of those queries into the cache. We are going to use this to refetch the Customers query from before, but you can also use it to fetch brand new queries.
-
-We are passing `refetchQueries` an array of strings that our Apollo Client will then try and match with of any previouisly fetched queries we have and re-execute them. If you refresh the app in the browser, try our Mutation again, now you can see the UI update automatically.
 
 ```ts
 graphql(customerUpdateMutation, {
@@ -145,6 +153,8 @@ graphql(customerUpdateMutation, {
   },
 }),
 ```
+
+We are passing `refetchQueries` an array of strings that our Apollo Client will then try and match with of any previouisly fetched queries we have and re-execute them. In our case, we want to re-fetch the `CustomerIndexQuery`. If you try our mutation again, now you can see the UI update automatically.
 
 
 ## Excercise: Delete Customer
