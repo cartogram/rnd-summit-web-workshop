@@ -19,22 +19,22 @@
 ### [Step 2: New Section](./Step%202:%20New%20Section.md) (60min)
 
 - Code Together: `CustomerIndex` UI
-- Individual Exercise: `CustomerShow` UI
+- Code Individually: `CustomerShow` UI Exercise
 - Code Together: `CustomerShow` UI Solution
 
 ### [Step 3: Query](./Step%203:%20Query.md) (90min)
 
-- Lecture: Introduction to Graphql?
+- Lecture: Introduction to Graphql
 - Lecture: Introduction to Apollo
 - Code Together: `CustomerIndex` Query
 - Lecture: `compose` utility
-- Individual Exercise `CustomerShow` Query
+- Code Individually: `CustomerShow` Query Exercise
 - Code Together: `CustomerShow` Query Solution
 
 ### [Step 4: Mutation](./Step%204:%20Mutation.md) (60 min)
 
 - Code Together: `CustomerUpdate` Mutation
-- Individual Exercise `CustomerDelete` Mutation
+- Code Individually `CustomerDelete` Mutation Exercise
 - Code Together:  `CustomerDelete` Mutation Solution
 
 ### [Step 5: Conclusion](./Step%205:%20Conclusion.md) (20 min)
