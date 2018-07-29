@@ -4,17 +4,7 @@ Now that we have our routes and components mocked up, we want to fetch real data
 
 ## What is GrapQL?
 
-Does anyone not know what GraphQL is?
-
-_(Ask someone in the audience to explain)_
-
-GraphQL is a query language and runtime that sits between the front-end client and back-end data service.
-
-Does anyone know why we use it at Shopify?
-
-_(Ask a few people in the audience to give reasons)_
-
-It is easiest to explain why we are so excited about GraphQL by first identifying the central problems with its main predecessor: REST.
+GraphQL is a query language and runtime that sits between the front-end client and back-end data service. It is easiest to explain why we are so excited about GraphQL by first identifying the central problems with its main predecessor: REST.
 
 1.  **Fetching data often requires multiple HTTP calls.**
 
@@ -226,12 +216,6 @@ Lets recall the type generic we talked about earlier, and introduce a new concep
 With this HOC successfully implemented, we now have a `data` prop that contains all the information about our GraphQL query: whether it is still loading the data, whether there was an error, some other helpful methods for refetching and polling, and ofcourse, the return data itself. Like we talked about earlier, this data comes back to us in the same shape as our query.
 
 Next we just need to fill in the real data in place our mock data.
-
----
-
-- Add `compose` https://www.apollographql.com/docs/react/essentials/queries.html#props
-- Add `ComposedProps` https://www.apollographql.com/docs/react/essentials/queries.html#render-prop
-
 
 ## Excercise
 
