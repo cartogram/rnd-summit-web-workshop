@@ -219,12 +219,4 @@ Next we just need to fill in the real data in place our mock data.
 
 ## Excercise
 
-1.  `CustomerShow` Add graphql for CustomerShow
-
-Explain variables
-
-2.  `CustomerIndex`: re-ordering
-
-Apollo Doc about what options the HoC has: https://www.apollographql.com/docs/react/essentials/queries.html#props
-Apollo Doc about what props are added by the Hoc: https://www.apollographql.com/docs/react/essentials/queries.html#render-prop
-
+1. `CustomerShow` Add graphql for CustomerShow
