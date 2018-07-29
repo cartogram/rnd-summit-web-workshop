@@ -4,6 +4,8 @@
 - Time: 5 hrs
 - [Slides](WebWorkshop.pdf)
 
+## Table of Contents
+
 ### [Step 0: Introduction](./Step%200:%20Introduction.md) (30min)
 
 - Lecture: Introduction
