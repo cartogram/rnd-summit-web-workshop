@@ -18,18 +18,18 @@
 
 ### [Step 2: New Section](./Step%202:%20New%20Section.md) (60min)
 
-- Code Together: `CustomerIndex` UI
-- Code Individually: `CustomerShow` UI Exercise
-- Code Together: `CustomerShow` UI Solution
+- Code Together: `CustomerList` UI
+- Code Individually: `CustomerDetails` UI Exercise
+- Code Together: `CustomerDetails` UI Solution
 
 ### [Step 3: Query](./Step%203:%20Query.md) (90min)
 
 - Lecture: Introduction to Graphql
 - Lecture: Introduction to Apollo
-- Code Together: `CustomerIndex` Query
+- Code Together: `CustomerList` Query
 - Lecture: `compose` utility
-- Code Individually: `CustomerShow` Query Exercise
-- Code Together: `CustomerShow` Query Solution
+- Code Individually: `CustomerDetails` Query Exercise
+- Code Together: `CustomerDetails` Query Solution
 
 ### [Step 4: Mutation](./Step%204:%20Mutation.md) (60 min)
 
