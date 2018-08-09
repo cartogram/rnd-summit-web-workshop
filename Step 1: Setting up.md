@@ -39,7 +39,7 @@ We are just going to run the command with defaults, so in your teminal run:
 
 ### App Structure Walkthrough
 
-In the root of this project, there are a number of configurations files and a few Javascript files to get us started. It is always best to start with the `package.json`, this file tells you what npm packages are included and a few sensible default scripts that you will run. If you were to open your console and run `yarn && yarn dev`, that will start the development server on your computer. It will take a moment to compile (and show a waiting screen on localhost: 8080) but when ready you can visit `localhost:8080` and see the default app with a title. Go to `app/sections/Home/HomeIndex/HomeIndex.tsx`.
+In the root of this project, there are a number of configurations files and a few Javascript files to get us started. It is always best to start with the `package.json`, this file tells you what npm packages are included and a few sensible default scripts that you will run. If you were to open your console and run `yarn && yarn dev`, that will start the development server on your computer. It will take a moment to compile (and show a waiting screen on localhost: 8080) but when ready you can visit `localhost:8080` and see the default app with a title. Go to `app/sections/Home/HomeDetails/HomeDetails.tsx`.
 
 _(Hot Tip: You can use `CMD` + `P` to search for this file.)_
 
