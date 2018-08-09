@@ -4,7 +4,7 @@
 
 We have our basic app scaffold. Let's build out a new section for our Customers routes. Make sure your dev server is running at this point. 
 
-The first thing we are going to do is create a new folder under `app/sections`, call this folder `Customers`. Now in your terminal, type `yarn create component CustomerIndex`. When you run this commnad, it will provide for you a list of possible places you can generate this component. When prompted, pick the `Customers` directory we just created for the location, and the choose `No` for graphql and `No` for styles. 
+The first thing we are going to do is create a new folder under `app/sections`, call this folder `Customers`. Now in your terminal, type `yarn create component CustomerList`. When you run this commnad, it will provide for you a list of possible places you can generate this component. When prompted, pick the `Customers` directory we just created for the location, and the choose `No` for graphql and `No` for styles. 
 
 ---
 
@@ -16,7 +16,7 @@ There are three main type of components that we typically build with React, Pure
 
 So in this case, let's go with the default, `pure` component.
 
-If you go into your `sections/Customer` folder, you should see a `CustomerIndex` component that has been scaffolded out for you with an `index.ts`, `tests` folder and `CustomerIndex.tsx` main component file. 
+If you go into your `sections/Customer` folder, you should see a `CustomerList` component that has been scaffolded out for you with an `index.ts`, `tests` folder and `CustomerList.tsx` main component file. 
 
 In the `section/Customer/index.ts` this is a file you will use to import the components in this section with their appropriate routes. Let's copy and paste the contents of `Sectiongs/Home/index.tsx`. In the future, the Webgen should take care of this for you. Rename all of the instances of `Home` to `Customer` (you can use `CMD` + `D` to help).
 
@@ -24,7 +24,7 @@ Go into `section/index.tsx` and export the Customers section from this file.
 
 Next go to the `app/foundation/routes` file and add a new route. Copy and past the base route of the application and change the `Home` component to `Customer` instead. Remove the `exact` prop, rename the path to `/customers` and the component to the `Customers` component we just generated, import this component as well.
 
-Now if you go to `localhost:8081/customers`, you will see this component being rendered. It just says "CustomerIndex" as that is the default from Webgen.
+Now if you go to `localhost:8081/customers`, you will see this component being rendered. It just says "CustomerList" as that is the default from Webgen.
 
 What question do you have?
 
@@ -36,7 +36,7 @@ Now that we have our page at our desired route, let's bring in Polaris and make 
 
 We can see a list of customers with some avatars and a Page with a title. In Polaris, we convienently have a Page component. Head to [polaris.shopify.com](polaris.shopify.com) and search for Page.
 
-Copy and paste the code snippet and paste it into our `CustomerIndex.tsx` page. When you save, prettier should take care of most of the formmating errors except that Page is not defined: we need to import it from polaris.
+Copy and paste the code snippet and paste it into our `CustomerList.tsx` page. When you save, prettier should take care of most of the formmating errors except that Page is not defined: we need to import it from polaris.
 
 Add `import {Page} from '@shopify/polaris'` to the top of the page. Note: Webgen has taken care of installing this for us when we generated our app. Delete all the props other than `title`, change this to `Customers` and refresh the page. You should see a Page with the title `Customers`.
 
@@ -109,9 +109,9 @@ These errors are called type guards. When reading your type guard messages, the 
 
 ### Excercise
 
-Now let's see if you can do the same process for `CustomerShow`. You will need to:
+Now let's see if you can do the same process for `CustomerDetails`. You will need to:
 
-1. Use Webgen to create a new component with the name `CustomerShow` in the Customers section, choose `function`
+1. Use Webgen to create a new component with the name `CustomerDetails` in the Customers section, choose `function`
 1. Add another Route to the Customers section of `/show` and point it to this new component
 1. Consult the mock up for what Polaris components you will need and render them in your new component
 1. Take a break
@@ -125,9 +125,9 @@ When we start again in 15 minutes we will go through the solution together, and 
 
 First thing we want to do is run our webgen command, I'm going to do this now.
 
-`yarn create shopify component CustomerShow`
+`yarn create shopify component CustomerDetails`
 
-In `Customers/index.tsx` copy and paste the first route, change the `component` prop to CustomerShow for this new route. We need to import this component as well.
+In `Customers/index.tsx` copy and paste the first route, change the `component` prop to CustomerDetails for this new route. We need to import this component as well.
 
 Change the path to javascript template literal using backticks, use `match.url` and append `/show`. 
 
@@ -135,7 +135,7 @@ Change the path to javascript template literal using backticks, use `match.url` 
 path={${math.url}/show
 `
 
-Now go to your CustomerShow component, lets add our Polaris imports. Lets start with the Page and add our title of `Customer`. We also want to add the `breadcrumbs`, this is an array of `LinkActions`, these have a `content` property which is the visual link title as well as a `url` which is where the breadcrumb go when clicked.
+Now go to your CustomerDetails component, lets add our Polaris imports. Lets start with the Page and add our title of `Customer`. We also want to add the `breadcrumbs`, this is an array of `LinkActions`, these have a `content` property which is the visual link title as well as a `url` which is where the breadcrumb go when clicked.
 
 If you go back to the browser, a breadcumb should show up that when clicked goes back to the CustomerIndex.
 
